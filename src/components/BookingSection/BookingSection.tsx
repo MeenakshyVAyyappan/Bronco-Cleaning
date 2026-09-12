@@ -10,7 +10,7 @@ import img1 from "../../images/booking/img-1.jpg";
 import img2 from "../../images/booking/img-2.jpg";
 import img3 from "../../images/booking/img-3.jpg";
 import img4 from "../../images/booking/img-4.jpg";
-import img5 from "../../images/booking/img-5.jpg";
+
 import shape from "../../images/booking/shape.png";
 
 const BookingSection: React.FC = () => {
@@ -64,42 +64,25 @@ const BookingSection: React.FC = () => {
         </div>
 
         {/* Booking Images */}
-        <div className="wpo-booking-wrap">
-
-          <div className="wpo-booking-item">
-            <Fade direction="left" duration={1000} triggerOnce>
-              <img src={img1} alt="" />
+        <div className="row mt-10 g-4 px-lg-5">
+          <div className="col-lg-4 col-md-6">
+            <Fade direction="up" duration={1000} triggerOnce>
+              <img src={img1} alt="" className="w-100 rounded shadow-sm" style={{ height: '400px', objectFit: 'cover' }} />
             </Fade>
           </div>
-
-          <div className="wpo-booking-item">
+          
+          <div className="col-lg-4 col-md-6">
             <Fade direction="up" duration={1200} triggerOnce>
-              <img src={img2} alt="" />
+              <img src={img2} alt="" className="w-100 rounded shadow-sm mb-4" style={{ height: '188px', objectFit: 'cover' }} />
+              <img src={img3} alt="" className="w-100 rounded shadow-sm" style={{ height: '188px', objectFit: 'cover' }} />
             </Fade>
           </div>
-
-          <div className="wpo-booking-item">
-
-            <div className="img-1">
-              <Fade direction="left" duration={1000} triggerOnce>
-                <img src={img3} alt="" />
-              </Fade>
-            </div>
-
-            <div className="img-2">
-              <Fade direction="right" duration={1000} triggerOnce>
-                <img src={img4} alt="" />
-              </Fade>
-            </div>
-
-          </div>
-
-          <div className="wpo-booking-item">
-            <Fade direction="right" duration={1000} triggerOnce>
-              <img src={img5} alt="" />
+          
+          <div className="col-lg-4 col-md-12">
+            <Fade direction="up" duration={1400} triggerOnce>
+              <img src={img4} alt="" className="w-100 rounded shadow-sm" style={{ height: '400px', objectFit: 'cover' }} />
             </Fade>
           </div>
-
         </div>
 
       </div>

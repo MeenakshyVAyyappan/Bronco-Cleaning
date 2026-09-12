@@ -3,18 +3,13 @@ import Slider from "react-slick";
 import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
 import cleaningIcon from "../../images/cleaning-icon.svg";
-import tLogo from "../../images/testimonial/t-logo.png";
 import rating from "../../images/testimonial/rating.svg";
-
-import img1 from "../../images/testimonial/image-1.jpg";
-import img2 from "../../images/testimonial/image-2.jpg";
 
 interface TestimonialItem {
   id: number;
   text: string;
   name: string;
   role: string;
-  image: string;
 }
 
 const TestimonialSection: React.FC = () => {
@@ -24,29 +19,25 @@ const TestimonialSection: React.FC = () => {
       id: 1,
       text: "Excellent cleaning service with professional staff. They handled our home cleaning perfectly and maintained great attention to detail.",
       name: "Dubai Customer",
-      role: "Residential Client",
-      image: img1
+      role: "Residential Client"
     },
     {
       id: 2,
       text: "Reliable and flexible cleaning solutions for our office in Business Bay. Highly recommended for corporate cleaning.",
       name: "Business Client",
-      role: "Corporate Office Manager, Dubai",
-      image: img2
+      role: "Corporate Office Manager, Dubai"
     },
     {
       id: 3,
       text: "The deep cleaning service for our villa in Palm Jumeirah was outstanding. Spotless tiles, clean AC vents, and polite staff!",
       name: "Villa Owner",
-      role: "Palm Jumeirah Resident",
-      image: img1
+      role: "Palm Jumeirah Resident"
     },
     {
       id: 4,
       text: "Top-notch Airbnb turnover cleaning in Downtown Dubai. Always on time and guest feedback has been 5 stars!",
       name: "Holiday Home Host",
-      role: "Downtown Dubai Host",
-      image: img2
+      role: "Downtown Dubai Host"
     }
   ];
 
@@ -87,7 +78,7 @@ const TestimonialSection: React.FC = () => {
   useSplitTextAnimation(ref);
 
   return (
-    <section className="wpo-testimonials-section section-padding pt-0" ref={ref}>
+    <section className="wpo-testimonials-section section-padding pt-0 pb-4" ref={ref}>
       <div className="wpo-testimonial-wrap section-padding box-style">
 
         {/* Shape */}
@@ -140,17 +131,13 @@ const TestimonialSection: React.FC = () => {
 
               <div key={item.id} className="wpo-testimonial-item">
 
-                <div className="t-logo">
-                  <img src={tLogo} alt="" />
-                </div>
+
 
                 <p>“{item.text}”</p>
 
                 <div className="wpo-testimonial-info">
 
-                  <div className="wpo-testimonial-info-img">
-                    <img src={item.image} alt={item.name} />
-                  </div>
+
 
                   <div className="wpo-testimonial-info-text">
                     <h5>{item.name}</h5>

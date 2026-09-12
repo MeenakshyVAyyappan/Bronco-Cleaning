@@ -53,7 +53,7 @@ const ServiceSection: React.FC = () => {
   useSplitTextAnimation(ref);
 
   return (
-    <section className="wpo-service-section section-padding" ref={ref}>
+    <section className="wpo-service-section section-padding pt-0" ref={ref}>
       <div className="wpo-service-wrap box-style section-padding">
         <div className="container">
 

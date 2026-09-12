@@ -65,10 +65,10 @@ const FaqSection: React.FC = () => {
     <section className="wpo-faq-section section-padding pt-0" ref={ref}>
       <div className="container">
         <div className="wpo-faq-wrap">
-          <div className="row">
+          <div className="row justify-content-center">
 
             {/* LEFT SIDE */}
-            <div className="col-lg-5 col-12">
+            <div className="col-lg-4 col-md-10 col-12">
               <Fade direction="left" duration={1200} triggerOnce>
                 <div className="wpo-faq-box">
 
@@ -98,7 +98,7 @@ const FaqSection: React.FC = () => {
             </div>
 
             {/* RIGHT SIDE */}
-            <div className="col-lg-7 col-12">
+            <div className="col-lg-6 col-md-10 col-12 mt-5 mt-lg-0">
               <Fade direction="right" duration={1200} triggerOnce>
 
                 <div className="wpo-faq-items">

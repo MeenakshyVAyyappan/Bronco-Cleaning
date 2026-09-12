@@ -14,12 +14,7 @@ export interface Service {
 }
 
 // images
-import service1 from "../images/service/service-1.jpg";
-import service2 from "../images/service/service-2.jpg";
-import service3 from "../images/service/service-3.jpg";
-import service4 from "../images/service/service-4.jpg";
-import service5 from "../images/service/service-5.jpg";
-import service6 from "../images/service/service-6.jpg";
+
 import homeCleaning from "../images/service/Home Cleaning Services.png";
 import officeCleaning from "../images/service/Office & Workplace Cleaning Services.png";
 import warehouseCleaning from "../images/service/Warehouse Cleaning Services.png";

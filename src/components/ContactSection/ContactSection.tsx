@@ -4,7 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
-import contactImg from "../../images/contact.jpg";
+import contactImg from "../../images/cleaning-logo-business-composition.png";
 import cleaningIcon from "../../images/cleaning-icon.svg";
 import logo1 from "../../images/contact-logo1.png";
 import logo2 from "../../images/contact-logo2.png";

@@ -18,7 +18,7 @@ const BlogSection: React.FC = () => {
   useSplitTextAnimation(ref);
 
   return (
-    <section className="wpo-blog-section section-padding pt-0"  ref={ref}>
+    <section className="wpo-blog-section section-padding pt-0 pb-4"  ref={ref}>
       <div className="wpo-blog-wrap section-padding box-style">
 
         <div className="container">
