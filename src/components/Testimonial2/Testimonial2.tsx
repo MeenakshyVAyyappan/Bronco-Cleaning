@@ -49,35 +49,37 @@ const TestimonialSectionTwo: React.FC = () => {
   ];
 
   const settings = {
-    autoplay: false,
-    speed: 300,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: true,
+    pauseOnFocus: false,
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,
+    draggable: true,
+    mobileFirst: true,
     responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 1,
-          dots: true
-        }
-      },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
-        }
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
       {
-        breakpoint: 500,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 1,
-          dots: true
-        }
-      }
-    ]
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
