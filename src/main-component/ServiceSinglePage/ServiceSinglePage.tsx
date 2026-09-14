@@ -6,11 +6,6 @@ import Footer from "../../components/footer/Footer";
 import Scrollbar from "../../components/scrollbar/scrollbar";
 import services from "../../api/services";
 
-import gallery1 from "../../images/image-gallery/1.jpg";
-import gallery2 from "../../images/image-gallery/2.jpg";
-import gallery3 from "../../images/image-gallery/3.jpg";
-import gallery4 from "../../images/image-gallery/4.jpg";
-
 const ServiceSinglePage: React.FC = () => {
 
   const { slug } = useParams<{ slug: string }>();
@@ -116,19 +111,6 @@ const ServiceSinglePage: React.FC = () => {
                   </div>
                 )}
 
-                {/* GALLERY */}
-                <div className="image-gallery my-4">
-                  <h3 className="h4 mb-3" style={{ color: "#00205b", fontWeight: "700" }}>
-                    Service Quality Standards :
-                  </h3>
-                  <ul>
-                    <li><img src={gallery1} alt="Cleaning perfection" /></li>
-                    <li><img src={gallery2} alt="Professional equipment" /></li>
-                    <li><img src={gallery3} alt="Trained staff" /></li>
-                    <li><img src={gallery4} alt="Sanitized results" /></li>
-                  </ul>
-                </div>
-
                 {/* CLEANING PROCESS ACCORDION */}
                 {ServiceDetails.process && ServiceDetails.process.length > 0 && (
                   <div className="my-4">
@@ -204,13 +186,13 @@ const ServiceSinglePage: React.FC = () => {
 
             <div className="col-lg-4 col-12 order-lg-1">
 
-              <div className="service-sidebar">
+              <div className="service-sidebar" style={{ position: "sticky", top: "120px" }}>
 
                 <div className="service-catagory">
                   <h4 className="px-3 pt-3 mb-2" style={{ color: "#00205b", fontWeight: "700" }}>
                     All Cleaning Services
                   </h4>
-                  <ul style={{ maxHeight: "450px", overflowY: "auto" }}>
+                  <ul>
 
                     {services.map((service) => (
 

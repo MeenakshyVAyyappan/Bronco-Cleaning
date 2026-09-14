@@ -20,8 +20,8 @@ const CTASection: React.FC = () => {
           <div className="row">
 
             {/* LEFT CTA */}
-            <div className="col-lg-6 col-12">
-              <Fade direction="up" duration={1200} triggerOnce>
+            <div className="col-lg-6 col-12 mb-4 mb-lg-0">
+              <Fade direction="up" duration={1200} triggerOnce className="h-100">
                 <div className="wpo-cta-box">
 
                   <div className="wpo-section-title-s2">
@@ -61,7 +61,7 @@ const CTASection: React.FC = () => {
 
             {/* RIGHT CTA */}
             <div className="col-lg-6">
-              <Fade direction="up" duration={1400} triggerOnce>
+              <Fade direction="up" duration={1400} triggerOnce className="h-100">
                 <div className="wpo-cta-box features">
 
                   <div className="wpo-section-title-s2">

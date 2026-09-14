@@ -2,9 +2,9 @@
 import blogImg1 from "../images/blog/img-1.jpg";
 import blogImg2 from "../images/blog/img-2.jpg";
 import blogImg3 from "../images/blog/img-3.jpg";
-import blogSImg1 from "../images/blog/img-4.jpg";
-import blogSImg2 from "../images/blog/img-5.jpg";
-import blogSImg3 from "../images/blog/img-6.jpg";
+import blogSImg1 from "../images/blog/img-1.jpg";
+import blogSImg2 from "../images/blog/img-2.jpg";
+import blogSImg3 from "../images/blog/img-3.jpg";
 
 export interface BlogItem {
   id: string;
@@ -87,74 +87,6 @@ const blogs: BlogItem[] = [
       "Moving homes in Dubai can be overwhelming. A detailed move-out cleaning checklist ensures landlord inspections pass without deposit deductions.",
       "Key checklist items include deep cleaning inside kitchen cabinets, degreasing oven hoods, descaling bathroom tiles, polishing window glass, and removing paint/wall scuffs.",
       "Hiring Bronco's specialized move-in/move-out team guarantees your new home is disinfected and sparkling clean before your furniture arrives."
-    ]
-  },
-  {
-    id: "5",
-    title: "How Professional Cleaning Improves Workplace Productivity",
-    slug: "how-professional-cleaning-improves-workplace-productivity",
-    image: blogImg2,
-    blogSingleImg: blogSImg3,
-    category: "Office Efficiency",
-    author: "Bronco Team",
-    comments: 5,
-    date: "18 Feb",
-    description: "Explore the direct correlation between tidy office spaces and enhanced focus, creativity, and staff morale.",
-    content: [
-      "Cluttered desks and dusty environments subconsciously trigger stress and lower concentration levels among office employees.",
-      "Fresh, pleasant indoor air quality maintained by frequent carpet vacuuming and air filter dusting keeps staff alert and energetic throughout the workday.",
-      "A professionally managed workplace hygiene routine creates an organized atmosphere where teams can focus entirely on core business objectives."
-    ]
-  },
-  {
-    id: "6",
-    title: "Airbnb Cleaning Tips for Dubai Hosts",
-    slug: "airbnb-cleaning-tips-for-dubai-hosts",
-    image: blogImg3,
-    blogSingleImg: blogSImg1,
-    category: "Airbnb Hospitality",
-    author: "Bronco Team",
-    comments: 7,
-    date: "14 Feb",
-    description: "Learn how superhosts in Dubai Marina and Downtown Dubai achieve 5-star cleanliness ratings on holiday home platforms.",
-    content: [
-      "Cleanliness is the single most critical factor influencing Airbnb reviews and guest ratings in Dubai's thriving short-term rental market.",
-      "Always inspect high-touch areas: remote controls, light switches, hair dryers, and microwave interiors must be spotlessly sanitized prior to guest check-in.",
-      "Partnering with Bronco Cleaning Services provides reliable, instant guest turnover services including crisp hotel-quality linen replacement."
-    ]
-  },
-  {
-    id: "7",
-    title: "Difference Between Regular Cleaning and Deep Cleaning",
-    slug: "difference-between-regular-cleaning-and-deep-cleaning",
-    image: blogImg1,
-    blogSingleImg: blogSImg3,
-    category: "Cleaning Advice",
-    author: "Bronco Team",
-    comments: 3,
-    date: "05 Feb",
-    description: "Not sure whether you need standard house chores or a comprehensive deep clean? Here is a complete breakdown.",
-    content: [
-      "Regular cleaning covers ongoing maintenance tasks: sweeping, surface wiping, trash disposal, bed making, and basic bathroom tidying.",
-      "Deep cleaning, on the other hand, targets heavy grease buildup in kitchen appliances, limescale removal from tiles, high-reach dust removal, AC vent cleaning, and steam sanitization.",
-      "For optimal home hygiene in Dubai, combine weekly regular maid visits with quarterly deep cleaning treatments from Bronco Cleaning Services."
-    ]
-  },
-  {
-    id: "8",
-    title: "Best Cleaning Practices for Commercial Spaces",
-    slug: "best-cleaning-practices-for-commercial-spaces",
-    image: blogImg2,
-    blogSingleImg: blogSImg1,
-    category: "Commercial Hygiene",
-    author: "Bronco Team",
-    comments: 9,
-    date: "28 Jan",
-    description: "Best practices for maintaining hygiene in retail stores, showrooms, clinics, and corporate venues across Dubai.",
-    content: [
-      "Commercial venues experience continuous foot traffic, requiring systematic floor care, glass polishing, and waste management protocols.",
-      "Implementing color-coded microfiber cloths prevents cross-contamination between restrooms, food prep areas, and customer service desks.",
-      "Bronco Cleaning Services provides tailored commercial packages that ensure full compliance with Dubai Municipality standards."
     ]
   }
 ];

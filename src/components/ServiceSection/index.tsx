@@ -20,30 +20,38 @@ const ServiceSection: React.FC = () => {
   const settings = {
     infinite: true,
     autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
     arrows: false,
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    pauseOnHover: true,
+    pauseOnFocus: false,
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,
+    draggable: true,
     responsive: [
       {
         breakpoint: 1399,
-        settings: { slidesToShow: 3 }
+        settings: { slidesToShow: 3, slidesToScroll: 1 }
       },
       {
         breakpoint: 1199,
-        settings: { slidesToShow: 2 }
+        settings: { slidesToShow: 2, slidesToScroll: 1 }
       },
       {
         breakpoint: 991,
-        settings: { slidesToShow: 2 }
+        settings: { slidesToShow: 1, slidesToScroll: 1 }
       },
       {
-        breakpoint: 757,
-        settings: { slidesToShow: 1 }
+        breakpoint: 767,
+        settings: { slidesToShow: 1, slidesToScroll: 1 }
       },
       {
         breakpoint: 575,
-        settings: { slidesToShow: 1 }
+        settings: { slidesToShow: 1, slidesToScroll: 1 }
       }
     ]
   };
@@ -82,7 +90,7 @@ const ServiceSection: React.FC = () => {
 
               <div key={service.id} className="wpo-service-slide-item">
 
-                <Fade direction="up" delay={index * 150} triggerOnce>
+                <Fade direction="up" delay={index * 150} triggerOnce className="h-100">
 
                   <div className="wpo-service-item">
 

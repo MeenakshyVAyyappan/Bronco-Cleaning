@@ -15,7 +15,6 @@ const HeroStatic: React.FC = () => {
       <div className="container-fluid">
         <div className="content-area">
           <div className="row align-items-center">
-
             {/* LEFT CONTENT */}
             <div className="col-xl-9 col-lg-8 col-12">
               <Fade direction="up" triggerOnce>

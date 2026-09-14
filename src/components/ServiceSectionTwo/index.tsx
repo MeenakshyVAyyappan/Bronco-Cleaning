@@ -16,14 +16,24 @@ const ServiceSectionTwo: React.FC = () => {
   const settings = {
     infinite: true,
     autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
     arrows: false,
     dots: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    pauseOnHover: true,
+    pauseOnFocus: false,
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,
+    draggable: true,
     responsive: [
-      { breakpoint: 1400, settings: { slidesToShow: 3 } },
-      { breakpoint: 991, settings: { slidesToShow: 2 } },
-      { breakpoint: 575, settings: { slidesToShow: 1 } },
+      { breakpoint: 1400, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+      { breakpoint: 1199, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 991, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 767, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 575, settings: { slidesToShow: 1, slidesToScroll: 1 } },
     ],
   };
 
@@ -50,11 +60,11 @@ const ServiceSectionTwo: React.FC = () => {
           <Slider {...settings} className="service-slider-s2">
 
             {services.map((service, index) => (
-              <div key={service.id} className="wpo-service-slide-item">
+              <div key={service.id} className="wpo-service-slide-item h-100">
 
-                <Fade direction="up" delay={index * 100} triggerOnce>
+                <Fade direction="up" delay={index * 100} triggerOnce className="h-100">
 
-                  <div className="wpo-service-item">
+                  <div className="wpo-service-item h-100">
 
                     <div className="wpo-service-img middle-light">
                       <img src={service.image} alt={service.title} />

@@ -105,36 +105,7 @@ const BlogPage: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
                 );
               })}
 
-              {/* PAGINATION */}
-              <div className="pagination-wrapper pagination-wrapper">
-                <ul className="pg-pagination">
 
-                  <li>
-                    <Link to="#" aria-label="Previous">
-                      <i className="fi ti-angle-left left"></i>
-                    </Link>
-                  </li>
-
-                  <li className="active">
-                    <Link to="#">1</Link>
-                  </li>
-
-                  <li>
-                    <Link to="#">2</Link>
-                  </li>
-
-                  <li>
-                    <Link to="#">3</Link>
-                  </li>
-
-                  <li>
-                    <Link to="#" aria-label="Next">
-                      <i className="fi ti-angle-right"></i>
-                    </Link>
-                  </li>
-
-                </ul>
-              </div>
 
             </div>
           </div>

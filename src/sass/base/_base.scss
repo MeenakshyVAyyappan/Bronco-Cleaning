@@ -13,7 +13,7 @@ body {
     background-color: $body-bg-color;
     font-size: 15px;
     font-size: calc-rem-value(15);
-    overflow-x: hidden;
+    overflow-x: clip;
 
     @include media-query(767px) {
         font-size: 14px;
@@ -84,7 +84,7 @@ img {
 }
 
 .App  {
-    overflow: hidden;
+    overflow: clip;
 }
 
 .error {
@@ -96,7 +96,7 @@ img {
 /* 1.2 Global Elements */
 .page-wrapper {
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .wow {

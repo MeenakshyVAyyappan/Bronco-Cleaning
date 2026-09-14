@@ -348,8 +348,21 @@
             }
         }
 
+        .slick-track {
+            display: flex !important;
+        }
+
+        .slick-slide {
+            height: inherit !important;
+
+            &>div {
+                height: 100%;
+            }
+        }
+
         .wpo-service-slide-item {
             padding: 0 15px;
+            height: 100%;
         }
 
         .wpo-service-item {
@@ -357,12 +370,15 @@
             background: $white;
             border-radius: 23px;
             padding-bottom: 0;
+            height: 100%;
 
             .wpo-service-img {
                 border-top-right-radius: 14px;
                 border-top-left-radius: 14px;
+                overflow: hidden;
 
                 img {
+                    width: 100%;
                     border-top-right-radius: 14px;
                     border-top-left-radius: 14px;
                     transform: scale(1);
@@ -1306,6 +1322,7 @@
         position: relative;
         overflow: hidden;
         z-index: 1;
+        height: 100%;
 
         @media(max-width:991px) {
             text-align: center;
@@ -1519,7 +1536,7 @@
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
-            line-height: 20px;
+            line-height: 1.4;
 
             @media(max-width:1199px) {
                 font-size: 18px;

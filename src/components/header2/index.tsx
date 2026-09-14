@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import type { FormEvent } from "react";
 
-import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
-import type { RootState, AppDispatch } from "../../store";
-import { removeFromCart } from "../../store/slices/cartSlice";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import { totalPrice } from "../../utils";
 
 interface SubMenuItem {
   label: string;
@@ -59,17 +55,18 @@ const menuItems: MenuItem[] = [
 ];
 
 const HeaderTwo: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
-
-  const carts = useSelector((state: RootState) => state.cart.cart);
-
   const [searchOpen, setSearchOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const ClickHandler = () => window.scrollTo(10, 0);
 
   const SubmitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/service?search=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchOpen(false);
+    }
   };
 
   return (
@@ -180,7 +177,9 @@ const HeaderTwo: React.FC = () => {
                             <input
                               type="text"
                               className="form-control"
-                              placeholder="Search Dubai cleaning..."
+                              placeholder="What service do you need?"
+                              value={searchQuery}
+                              onChange={(e) => setSearchQuery(e.target.value)}
                             />
                             <button type="submit">
                               <i className="fi flaticon-magnifying-glass"></i>
@@ -192,7 +191,7 @@ const HeaderTwo: React.FC = () => {
                   </div>
 
                   {/* Mini Cart */}
-                  <div className="mini-cart">
+                  {/* <div className="mini-cart">
                     <button
                       className="cart-toggle-btn"
                       onClick={() => setCartOpen(!cartOpen)}
@@ -272,7 +271,7 @@ const HeaderTwo: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Quote Button */}
                   <div className="close-form">

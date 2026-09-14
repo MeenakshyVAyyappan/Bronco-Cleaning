@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import blogs from "../../api/blogs";
 
-import aboutImg from "../../images/blog/about-widget.jpg";
+import logoImg from "../../images/blog/bronco-icon.png";
 
 const BlogSidebar: React.FC = () => {
 
@@ -18,7 +18,7 @@ const BlogSidebar: React.FC = () => {
       <div className="widget about-widget">
 
         <div className="img-holder">
-          <img src={aboutImg} alt="about Bronco" />
+          <img src={logoImg} alt="about Bronco" />
         </div>
 
         <h4>Bronco Cleaning Experts</h4>
@@ -142,3 +142,4 @@ const BlogSidebar: React.FC = () => {
 };
 
 export default BlogSidebar;
+// Trigger rebuild

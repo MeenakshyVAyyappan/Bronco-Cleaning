@@ -2,10 +2,10 @@ import React from "react";
 import ContactForm from "../ContactFrom";
 
 const dubailandAreas = [
-  "Al Safa", "Jumeirah", "Downtown Dubai", "DIFC", "City Walk", 
-  "Business Bay", "Nad Al Sheba", "Sheikh Zayed Road", "Al Quoz", 
-  "Al Sufouh", "Dubai Hills", "Arabian Ranches", "Dubai Sports City", 
-  "Motor City", "Al Barsha", "Jumeirah Golf Estates", "Emirates Hills", 
+  "Al Safa", "Jumeirah", "Downtown Dubai", "DIFC", "City Walk",
+  "Business Bay", "Nad Al Sheba", "Sheikh Zayed Road", "Al Quoz",
+  "Al Sufouh", "Dubai Hills", "Arabian Ranches", "Dubai Sports City",
+  "Motor City", "Al Barsha", "Jumeirah Golf Estates", "Emirates Hills",
   "Palm Jumeirah", "JLT", "Dubai Marina", "Jumeirah Park", "Palm Jebel Ali", "Jebel Ali Free Zone"
 ];
 
@@ -13,7 +13,7 @@ const Contactpage: React.FC = () => {
 
   return (
     <>
-      <section className="contact-page section-padding">
+      <section className="contact-page section-padding pt-5">
         <div className="container">
 
           {/* Office Info */}
@@ -50,11 +50,11 @@ const Contactpage: React.FC = () => {
                       +971 4 123 4567 <br />
                       +971 50 123 4567
                     </p>
-                    <a 
-                      href="https://wa.me/971501234567" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="btn btn-sm btn-success mt-2" 
+                    <a
+                      href="https://wa.me/971501234567"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-sm btn-success mt-2"
                       style={{ borderRadius: "20px", fontSize: "12px", fontWeight: "600" }}
                     >
                       <i className="fa fa-whatsapp me-1"></i> Chat on WhatsApp

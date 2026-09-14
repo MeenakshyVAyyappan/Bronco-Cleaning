@@ -2,7 +2,7 @@
 16. contact-page
 --------------------------------------------------------------*/
 .office-info {
-	padding-bottom: 120px;
+	padding-bottom: 0px;
 	margin: 0 -10px;
 
 	@media(max-width:1199px) {
@@ -44,6 +44,7 @@
 		background: transparent;
 		position: relative;
 		transition: all .3s ease-in-out;
+		height: 100%;
 
 		@media(max-width:1199px) {
 			margin: 0px;
@@ -137,6 +138,15 @@
 
 }
 
+.contact-wrap {
+    padding-left: 100px;
+    
+    @media (max-width:991px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .contact-left {
 	max-width: 518px;
 	text-align: left;
@@ -184,7 +194,6 @@
 
 .contact-right {
 	max-width: 484px;
-
 
 	.title {
 		h2 {
