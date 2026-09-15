@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import Slider from "react-slick";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
+import useResponsiveSlidesToShow from "../useResponsiveSlidesToShow/useResponsiveSlidesToShow";
 import services from "../../api/services";
 
 import cleaningIcon from "../../images/cleaning-icon.svg";
@@ -11,29 +12,19 @@ import shape1 from "../../images/service/shape1.svg";
 import shape2 from "../../images/service/shape2.svg";
 import shape3 from "../../images/service/shape3.svg";
 
-const getSlidesToShow = () => {
-  if (typeof window === "undefined") return 3;
-  if (window.innerWidth <= 575) return 1;
-  if (window.innerWidth <= 991) return 2;
-  return 3;
-};
-
 const ServiceSection: React.FC = () => {
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
   };
 
-  // react-slick's built-in `responsive` breakpoints only re-evaluate on a
-  // matchMedia "change" event, so they never apply on initial load if the
-  // page already opens at that width (e.g. a phone). Track it ourselves.
-  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow);
-
-  useEffect(() => {
-    const handleResize = () => setSlidesToShow(getSlidesToShow());
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const slidesToShow = useResponsiveSlidesToShow(
+    [
+      { maxWidth: 575, slidesToShow: 1 },
+      { maxWidth: 991, slidesToShow: 2 },
+    ],
+    3
+  );
 
   const settings = {
     infinite: true,

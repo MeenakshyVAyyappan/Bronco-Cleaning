@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
+import useResponsiveSlidesToShow from "../useResponsiveSlidesToShow/useResponsiveSlidesToShow";
 import cleaningIcon from "../../images/cleaning-icon.svg";
 import rating from "../../images/testimonial/rating.svg";
 
@@ -41,6 +42,14 @@ const TestimonialSection: React.FC = () => {
     }
   ];
 
+  const slidesToShow = useResponsiveSlidesToShow(
+    [
+      { maxWidth: 575, slidesToShow: 1 },
+      { maxWidth: 991, slidesToShow: 2 },
+    ],
+    3
+  );
+
   const settings = {
     infinite: true,
     autoplay: true,
@@ -48,7 +57,7 @@ const TestimonialSection: React.FC = () => {
     speed: 500,
     arrows: false,
     dots: true,
-    slidesToShow: 3,
+    slidesToShow,
     slidesToScroll: 1,
     pauseOnHover: true,
     pauseOnFocus: false,
@@ -56,23 +65,6 @@ const TestimonialSection: React.FC = () => {
     swipeToSlide: true,
     touchMove: true,
     draggable: true,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
   const ref = useRef<HTMLDivElement | null>(null);
