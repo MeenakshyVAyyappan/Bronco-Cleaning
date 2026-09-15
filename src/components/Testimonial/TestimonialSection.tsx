@@ -48,7 +48,7 @@ const TestimonialSection: React.FC = () => {
     speed: 500,
     arrows: false,
     dots: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     pauseOnHover: true,
     pauseOnFocus: false,

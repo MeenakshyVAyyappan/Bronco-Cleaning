@@ -1625,6 +1625,10 @@
         }
 
         .wpo-testimonial-item {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             padding: 40px;
             border-radius: 15px;
             border: 1px solid #42C652;
@@ -1768,8 +1772,17 @@
             }
         }
 
+        .wpo-testimonial-active .slick-track {
+            display: flex !important;
+        }
+
         .wpo-testimonial-active .slick-slide {
             padding: 0 15px;
+            height: inherit !important;
+
+            > div {
+                height: 100%;
+            }
         }
 
         .wpo-testimonial-active .slick-list {
