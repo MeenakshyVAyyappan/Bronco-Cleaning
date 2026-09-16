@@ -65,42 +65,18 @@ const Footer: React.FC = () => {
         <div className="container">
           <div className="footer">
 
-            {/* Newsletter */}
-            <div className="item widget-newsletter">
-              <h2 className="title">Bronco Newsletter</h2>
 
-              <div className="newsletter">
-                <form className="form-fild" onSubmit={(e) => e.preventDefault()}>
-
-                  <input
-                    className="fild"
-                    type="email"
-                    placeholder="Enter your email for Dubai deals"
-                  />
-
-                  <button type="submit">
-                    <img src={airplane} alt="" />
-                  </button>
-
-                  <div className="terms">
-                    <input
-                      type="checkbox"
-                      id="checkbox"
-                      className="checkbox-input"
-                      defaultChecked
-                    />
-
-                    <label htmlFor="checkbox" className="checkbox-label">
-                      <span className="custom-checkbox"></span>
-                      I agree to Bronco Cleaning terms & policies
-                    </label>
-                  </div>
-
-                </form>
-              </div>
+            {/* Logo */}
+            <div className="item widget-about">
+              <Link className="navbar-brand d-flex align-items-center mb-4" to="/" style={{ textDecoration: 'none' }}>
+                <span style={{ fontSize: "28px", fontWeight: "800", color: "#22302A", letterSpacing: "0.5px" }}>
+                  BRONCO <span style={{ color: "#7C9473" }}>CLEANING</span>
+                </span>
+              </Link>
+              <p style={{ color: "#4A5852", lineHeight: "1.6", maxWidth: "400px" }}>
+                Bronco Cleaning Services provides reliable, high-quality home, office, and deep cleaning solutions across all major Dubai communities.
+              </p>
             </div>
-
-            {/* Quick Links */}
             <div className="item">
               <h2 className="title">Quick Links</h2>
 
@@ -120,11 +96,11 @@ const Footer: React.FC = () => {
               <h2 className="title">Dubai Contact Info</h2>
 
               <ul>
-                <li>Bronco Cleaning Services LLC</li>
-                <li>Business Bay & Sheikh Zayed Road</li>
-                <li>Dubai, United Arab Emirates</li>
+                <li>Bronco Cleaning Solution L.L.C-FZ</li>
+                <li>Limited Liability Company</li>
+                <li>Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai UAE</li>
                 <li>info@broncocleaning.ae</li>
-                <li>+971 4 123 4567 / +971 50 123 4567</li>
+                <li>+971 054 148 4800</li>
               </ul>
             </div>
 
@@ -145,7 +121,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 <div className="col-lg-3 col-12 text-center">
-                  <p>Saturday – Thursday: 8:00 AM – 8:00 PM</p>
+                  <p>Sun – Mon: 8:00 AM – 8:00 PM</p>
                 </div>
 
                 <div className="col-lg-4 col-12">

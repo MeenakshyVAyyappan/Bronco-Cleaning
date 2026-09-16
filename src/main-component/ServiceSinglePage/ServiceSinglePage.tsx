@@ -172,8 +172,8 @@ const ServiceSinglePage: React.FC = () => {
                     <Link to="/contact" className="theme-btn">
                       Book Service Online
                     </Link>
-                    <a href="tel:+97141234567" className="theme-btn-s2">
-                      Call +971 4 123 4567
+                    <a href="tel:+9710541484800" className="theme-btn-s2">
+                      Call +971 054 148 4800
                     </a>
                   </div>
                 </div>
@@ -229,11 +229,11 @@ const ServiceSinglePage: React.FC = () => {
 
                   <span>Call anytime 24/7</span>
 
-                  <a href="tel:+97141234567" className="num">
-                    <span>+971 4 123 4567</span>
+                  <a href="tel:+9710541484800" className="num">
+                    <span>+971 054 148 4800</span>
                   </a>
 
-                  <a href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer" className="btn btn-success w-100 mt-3" style={{ borderRadius: "20px", fontWeight: "600" }}>
+                  <a href="https://wa.me/9710541484800" target="_blank" rel="noopener noreferrer" className="btn btn-success w-100 mt-3" style={{ borderRadius: "20px", fontWeight: "600" }}>
                     <i className="fa fa-whatsapp me-2"></i> WhatsApp Enquiry
                   </a>
 

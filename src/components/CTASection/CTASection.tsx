@@ -41,11 +41,11 @@ const CTASection: React.FC = () => {
                     </p>
                   </div>
 
-                  <a href="tel:+97141234567" className="call">
+                  <a href="tel:+9710541484800" className="call">
                     <i>
                       <img src={phoneIcon} alt="" />
                     </i>
-                    +971 4 123 4567
+                    +971 054 148 4800
                   </a>
 
                   <small>

@@ -350,8 +350,8 @@ const ProjectSinglePage: React.FC = () => {
 
                                     <span>Call anytime</span>
 
-                                    <a href="tel:+97141234567" className="num">
-                                        <span>+971 4 123 4567</span>
+                                    <a href="tel:+9710541484800" className="num">
+                                        <span>+971 054 148 4800</span>
                                     </a>
 
                                 </div>

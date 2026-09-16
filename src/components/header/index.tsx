@@ -154,12 +154,12 @@ const Header: React.FC = () => {
               {/* Call Section */}
               <div className="col-xl-3 col-lg-2 col-md-2 col-2">
                 <div className="header-right">
-                  <a href="tel:+97141234567" className="call">
+                  <a href="tel:+9710541484800" className="call">
                     <div className="icon">
                       <img src={callIcon} alt="call" />
                     </div>
                     <div className="text">
-                      <h4>+971 4 123 4567</h4>
+                      <h4>+971 054 148 4800</h4>
                       <span>Book Dubai Cleaner</span>
                     </div>
                   </a>
