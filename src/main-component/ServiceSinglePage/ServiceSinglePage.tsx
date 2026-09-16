@@ -78,7 +78,7 @@ const ServiceSinglePage: React.FC = () => {
                 {/* BENEFITS */}
                 {ServiceDetails.benefits && ServiceDetails.benefits.length > 0 && (
                   <div className="my-4 p-4 rounded bg-light border-start border-4 border-success">
-                    <h3 className="h4 mb-3" style={{ color: "#00205b", fontWeight: "700" }}>
+                    <h3 className="h4 mb-3" style={{ color: "#22302A", fontWeight: "700" }}>
                       Key Benefits of {ServiceDetails.title}
                     </h3>
                     <ul className="list-unstyled">
@@ -95,7 +95,7 @@ const ServiceSinglePage: React.FC = () => {
                 {/* WHY CHOOSE BRONCO */}
                 {ServiceDetails.whyChoose && ServiceDetails.whyChoose.length > 0 && (
                   <div className="my-4">
-                    <h3 className="h4 mb-3" style={{ color: "#00205b", fontWeight: "700" }}>
+                    <h3 className="h4 mb-3" style={{ color: "#22302A", fontWeight: "700" }}>
                       Why Choose Bronco Cleaning Services?
                     </h3>
                     <div className="row g-3">
@@ -114,7 +114,7 @@ const ServiceSinglePage: React.FC = () => {
                 {/* CLEANING PROCESS ACCORDION */}
                 {ServiceDetails.process && ServiceDetails.process.length > 0 && (
                   <div className="my-4">
-                    <h3 className="h4 mb-3" style={{ color: "#00205b", fontWeight: "700" }}>
+                    <h3 className="h4 mb-3" style={{ color: "#22302A", fontWeight: "700" }}>
                       Step-by-Step Cleaning Process
                     </h3>
                     <div className="accordion">
@@ -144,7 +144,7 @@ const ServiceSinglePage: React.FC = () => {
 
                 {/* SERVICE LOCATIONS COVERED */}
                 <div className="my-4 p-4 rounded bg-light">
-                  <h3 className="h5 mb-2" style={{ color: "#00205b", fontWeight: "700" }}>
+                  <h3 className="h5 mb-2" style={{ color: "#22302A", fontWeight: "700" }}>
                     Service Areas Covered in Dubai
                   </h3>
                   <p className="text-muted small mb-3">
@@ -161,7 +161,7 @@ const ServiceSinglePage: React.FC = () => {
                 </div>
 
                 {/* CTA BANNER */}
-                <div className="p-4 rounded text-white text-center my-4" style={{ backgroundColor: "#00205b" }}>
+                <div className="p-4 rounded text-white text-center my-4" style={{ backgroundColor: "#22302A" }}>
                   <h3 className="text-white mb-2" style={{ fontWeight: "700" }}>
                     Book Your Cleaning Service Today
                   </h3>
@@ -189,7 +189,7 @@ const ServiceSinglePage: React.FC = () => {
               <div className="service-sidebar" style={{ position: "sticky", top: "120px" }}>
 
                 <div className="service-catagory">
-                  <h4 className="px-3 pt-3 mb-2" style={{ color: "#00205b", fontWeight: "700" }}>
+                  <h4 className="px-3 pt-3 mb-2" style={{ color: "#22302A", fontWeight: "700" }}>
                     All Cleaning Services
                   </h4>
                   <ul>

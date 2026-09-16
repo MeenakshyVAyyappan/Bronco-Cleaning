@@ -35,6 +35,7 @@ import hourlyCleaning from "../images/service/Hourly Cleaning Services.png";
 import gymCleaning from "../images/service/Gym Cleaning Services.png";
 import garageCleaning from "../images/service/Garage Deep Cleaning Services.png";
 import outdoorCleaning from "../images/service/Outdoor Cleaning Services.png";
+import aviationWarehouseCleaning from "../images/service/Aviation Warehouse Cleaning Services.png";
 
 const dubailandAreas = [
   "Al Safa", "Jumeirah", "Downtown Dubai", "DIFC", "City Walk", 
@@ -573,6 +574,37 @@ const services: Service[] = [
       "Shampooing and rotary agitation to break down embedded dirt",
       "Deep hot water extraction vacuuming out dirty liquid",
       "Deodorization and fabric protector application"
+    ],
+    serviceAreas: dubailandAreas
+  },
+  {
+    id: 21,
+    title: "Aviation Warehouse Cleaning Services",
+    slug: "aviation-warehouse-cleaning-services",
+    price: "Custom Quote",
+    image: aviationWarehouseCleaning,
+    intro: "Specialized cleaning for aircraft-parts warehouses, storage facilities, and aviation logistics units across Dubai.",
+    description: "Aviation warehouses call for a higher standard of housekeeping to protect sensitive aircraft components, meet safety compliance, and keep operations running without disruption. Bronco Cleaning Services provides dedicated aviation warehouse cleaning covering storage floors, racking systems, workshops, and loading areas across Dubai's aviation and logistics hubs.",
+    benefits: [
+      "Aircraft-parts warehouse floor cleaning",
+      "Racking and shelving cleaning",
+      "Storage-bin cleaning",
+      "Dust and debris removal",
+      "High-level cleaning of rafters, beams, and overhead structures",
+      "Loading and unloading area cleaning",
+      "Workshop and maintenance-area cleaning",
+      "Waste segregation and housekeeping"
+    ],
+    whyChoose: [
+      "Experienced with aviation and logistics facilities across Dubai's airport free zones",
+      "Trained crews familiar with safely handling sensitive aircraft-parts storage areas",
+      "Flexible scheduling around flight operations and warehouse shift patterns"
+    ],
+    process: [
+      "Site walkthrough to map racking, storage bins, and high-level zones",
+      "Dry dusting and debris removal from floors, shelving, and workstations",
+      "High-level cleaning of overhead structures, beams, and racking tops",
+      "Final waste segregation, housekeeping, and quality inspection"
     ],
     serviceAreas: dubailandAreas
   }

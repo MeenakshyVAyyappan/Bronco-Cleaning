@@ -28,12 +28,14 @@ const menuItems: MenuItem[] = [
   },
   {
     label: "Services",
+    path: "/service",
     children: [
       { label: "All Cleaning Services", path: "/service" },
       { label: "Deep Cleaning Dubai", path: "/service-single/deep-cleaning-services-dubai" },
       { label: "Home Cleaning", path: "/service-single/home-cleaning-services" },
       { label: "Office & Workplace", path: "/service-single/office-workplace-cleaning-services" },
       { label: "Warehouse Cleaning", path: "/service-single/warehouse-cleaning-services" },
+      { label: "Aviation Warehouse Cleaning", path: "/service-single/aviation-warehouse-cleaning-services" },
       { label: "Move-In / Move-Out", path: "/service-single/moving-in-moving-out-cleaning-services" },
       { label: "Airbnb Cleaning", path: "/service-single/airbnb-cleaning-services" },
       { label: "Maid Services", path: "/service-single/maid-services" },
@@ -87,8 +89,8 @@ const HeaderTwo: React.FC = () => {
               <div className="col-xl-3 col-lg-2 col-md-6 col-6">
                 <div className="navbar-header">
                   <Link className="navbar-brand d-flex align-items-center" to="/">
-                    <span style={{ fontSize: "22px", fontWeight: "800", color: "#00205b", letterSpacing: "0.5px" }}>
-                      BRONCO <span style={{ color: "#42C652" }}>CLEANING</span>
+                    <span style={{ fontSize: "22px", fontWeight: "800", color: "#22302A", letterSpacing: "0.5px" }}>
+                      BRONCO <span style={{ color: "#7C9473" }}>CLEANING</span>
                     </span>
                   </Link>
                 </div>

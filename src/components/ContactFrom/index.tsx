@@ -108,12 +108,13 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div className="input-item">
-        <select {...register("service")} className="fild" style={{ backgroundColor: "#f4f7fc", color: "#666" }}>
+        <select {...register("service")} className="fild" style={{ backgroundColor: "#F2F5EF", color: "#666" }}>
           <option value="">Select Cleaning Service</option>
           <option>Deep Cleaning Services Dubai</option>
           <option>Home Cleaning Services</option>
           <option>Office & Workplace Cleaning</option>
           <option>Warehouse Cleaning Services</option>
+          <option>Aviation Warehouse Cleaning Services</option>
           <option>Moving-In & Moving-Out Cleaning</option>
           <option>After Builder Cleaning Services</option>
           <option>Airbnb Cleaning Services</option>
@@ -134,7 +135,7 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div className="input-item">
-        <select {...register("location")} className="fild" style={{ backgroundColor: "#f4f7fc", color: "#666" }}>
+        <select {...register("location")} className="fild" style={{ backgroundColor: "#F2F5EF", color: "#666" }}>
           <option value="">Select Dubai Location Area</option>
           {dubailandAreas.map((area, idx) => (
             <option key={idx} value={area}>{area}</option>

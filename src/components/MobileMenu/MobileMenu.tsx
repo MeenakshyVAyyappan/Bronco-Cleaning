@@ -39,6 +39,7 @@ const menus: MenuItem[] = [
       { id: 33, title: "Home Cleaning Services", link: "/service-single/home-cleaning-services" },
       { id: 34, title: "Office Cleaning Services", link: "/service-single/office-workplace-cleaning-services" },
       { id: 35, title: "Warehouse Cleaning", link: "/service-single/warehouse-cleaning-services" },
+      { id: 40, title: "Aviation Warehouse Cleaning", link: "/service-single/aviation-warehouse-cleaning-services" },
       { id: 36, title: "Move-In / Move-Out", link: "/service-single/moving-in-moving-out-cleaning-services" },
       { id: 37, title: "Airbnb Cleaning", link: "/service-single/airbnb-cleaning-services" },
       { id: 38, title: "Maid Services", link: "/service-single/maid-services" },

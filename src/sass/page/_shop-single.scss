@@ -114,7 +114,7 @@
 			.rating{
 				margin-right: 10px;
 				i{
-					color: #f9d322;
+					color: #6E958A;
 				}
 			}
 		}
@@ -533,12 +533,12 @@
 			  
 			  .give-rating:not(:hover) label input:checked ~ .icon,
 			  .give-rating:hover label:hover input ~ .icon {
-				color: #FFD400;
+				color: #6E958A;
 			  }
 			  
 			  .give-rating label input:focus:not(:checked) ~ .icon:last-child {
 				color: #ddd;
-				text-shadow: 0 0 5px #FFD400;
+				text-shadow: 0 0 5px #6E958A;
 			  }
 
 			form {

@@ -13,7 +13,7 @@
 
     h2 {
         text-align: center;
-        color: #0E152B;
+        color: #212F28;
         font-family: $base-font;
         font-size: 16px;
         font-style: normal;
@@ -58,7 +58,7 @@
 
     .main-title {
         h2 {
-            color: #0E152B;
+            color: #212F28;
             font-size: 28px;
             font-style: normal;
             font-weight: 400;
@@ -758,7 +758,7 @@
 /* 3.6 wpo-work-section */
 
 .wpo-work-section {
-    background: #3CA200;
+    background: #7C9473;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -824,7 +824,7 @@
                 width: 1px;
                 width: 2px;
                 height: 30.934px;
-                background: #FFC813;
+                background: #86A091;
             }
 
             &:before {
@@ -1055,7 +1055,7 @@
             }
 
             h3 {
-                color: #0E152B;
+                color: #212F28;
                 text-align: center;
                 font-size: 18px;
                 font-style: normal;
@@ -1105,7 +1105,7 @@
                 left: 17px;
                 top: 17px;
                 border-radius: 6px;
-                background: #3CA200;
+                background: #7C9473;
                 padding: 5px 25px;
                 font-family: $heading-font;
                 font-size: 24px;
@@ -1573,7 +1573,7 @@
 
         &.active {
             button {
-                color: #0E152B;
+                color: #212F28;
 
                 &::after {
                     content: "\e622";
@@ -1631,7 +1631,7 @@
             justify-content: space-between;
             padding: 40px;
             border-radius: 15px;
-            border: 1px solid #42C652;
+            border: 1px solid #6E958A;
             background: #FFF;
             box-shadow: 0px 4px 42px 0px rgba(0, 0, 0, 0.00);
 
@@ -1911,7 +1911,7 @@
             width: 100%;
             height: 100%;
             content: "";
-            background: linear-gradient(110deg, #FFDD9E -0.4%, #D6E2EA 63.6%);
+            background: linear-gradient(110deg, #DCE8D9 -0.4%, #CFE0D6 63.6%);
             opacity: 0.46;
             z-index: -1;
         }
@@ -1997,7 +1997,7 @@
     .wpo-contact-form-area {
         border-radius: 24px;
         overflow: hidden;
-        background: #3CA200;
+        background: #7C9473;
 
         textarea.form-control {
             height: 130px;

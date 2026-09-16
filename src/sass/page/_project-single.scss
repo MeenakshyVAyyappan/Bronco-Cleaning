@@ -26,7 +26,7 @@
         }
 
         .middle-light:before {
-            background: rgba(255, 215, 0, 0.2);
+            background: rgba(110, 149, 138, 0.2);
         }
 
         &:hover {
@@ -353,7 +353,7 @@
     width: 100%;
     height: 100%;
     content: "";
-    background: rgba(66, 198, 82, .51);
+    background: rgba(124, 148, 115, .51);
 }
 
 .wpo-minimal-wrap .video-holder .video-btn {
@@ -408,32 +408,32 @@
 
 @-webkit-keyframes spineerb {
     0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(66, 198, 82, .51);
+        -webkit-box-shadow: 0 0 0 0 rgba(124, 148, 115, .51);
     }
 
     70% {
-        -webkit-box-shadow: 0 0 0 20px rgba(66, 198, 82, 0);
+        -webkit-box-shadow: 0 0 0 20px rgba(124, 148, 115, 0);
     }
 
     100% {
-        -webkit-box-shadow: 0 0 0 0 rgba(66, 198, 82, 0);
+        -webkit-box-shadow: 0 0 0 0 rgba(124, 148, 115, 0);
     }
 }
 
 @keyframes spineerb {
     0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(66, 198, 82, .51);
-        box-shadow: 0 0 0 0 rgba(66, 198, 82, .51);
+        -webkit-box-shadow: 0 0 0 0 rgba(124, 148, 115, .51);
+        box-shadow: 0 0 0 0 rgba(124, 148, 115, .51);
     }
 
     70% {
-        -webkit-box-shadow: 0 0 0 20px rgba(66, 198, 82, 0);
-        box-shadow: 0 0 0 20px rgba(66, 198, 82, 0);
+        -webkit-box-shadow: 0 0 0 20px rgba(124, 148, 115, 0);
+        box-shadow: 0 0 0 20px rgba(124, 148, 115, 0);
     }
 
     100% {
-        -webkit-box-shadow: 0 0 0 0 rgba(66, 198, 82, 0);
-        box-shadow: 0 0 0 0 rgba(66, 198, 82, 0);
+        -webkit-box-shadow: 0 0 0 0 rgba(124, 148, 115, 0);
+        box-shadow: 0 0 0 0 rgba(124, 148, 115, 0);
     }
 }
 
@@ -452,14 +452,14 @@
 .wpo-project-details-text {
     text-align: center;
     padding: 40px;
-    background: #3ea502;
+    background: #7C9473;
 
 }
 
 .wpo-project-details-text-3 {
     text-align: center;
     padding: 40px;
-    background: #3b9308;
+    background: #5C7A55;
 }
 
 .wpo-project-details-list {
@@ -632,7 +632,7 @@
 
     .wpo-project-details-list {
         padding-bottom: 10px;
-        background: #3ea502;
+        background: #7C9473;
     }
 }
 
