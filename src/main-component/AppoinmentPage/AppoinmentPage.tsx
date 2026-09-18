@@ -42,14 +42,20 @@ const AppoinmentPage: React.FC = () => {
   });
 
   const onSubmit = async (data: FormData) => {
+    const whatsappNumber = "918078311399";
+    const textMessage = `*Appointment Request - Bronco Cleaning Services*\n\n` +
+      `👤 *Name:* ${data.name}\n` +
+      `📧 *Email:* ${data.email}\n` +
+      `📞 *Phone:* ${data.phone}\n` +
+      `🧹 *Service:* ${data.service}\n` +
+      `📐 *Approx SF:* ${data.approx || "N/A"}\n` +
+      `🛏️ *Bedrooms:* ${data.bed || "N/A"}\n` +
+      `🛁 *Bathrooms:* ${data.bath || "N/A"}\n` +
+      `📮 *Zip Code:* ${data.zip || "N/A"}\n` +
+      `💬 *Note:* ${data.note || "None"}`;
 
-    console.log(data);
-
-    // simulate API request
-    await new Promise((resolve) => setTimeout(resolve, 1200));
-
-    alert("Appointment submitted successfully!");
-
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textMessage)}`;
+    window.open(whatsappUrl, "_blank");
     reset();
   };
 

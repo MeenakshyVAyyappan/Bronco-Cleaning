@@ -21,8 +21,25 @@ const TeamSinglePage: React.FC = () => {
     (item) => item.slug === slug
   );
 
-  const SubmitHandler = (e: React.FormEvent) => {
+  const SubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string || "N/A";
+    const email = formData.get("email") as string || "N/A";
+    const phone = formData.get("phone") as string || "N/A";
+    const subject = formData.get("subject") as string || "N/A";
+    const note = formData.get("note") as string || "N/A";
+
+    const whatsappNumber = "918078311399";
+    const textMessage = `*Appointment Enquiry - Bronco Cleaning Services*\n\n` +
+      `👤 *Name:* ${name}\n` +
+      `📧 *Email:* ${email}\n` +
+      `📞 *Phone:* ${phone}\n` +
+      `📋 *Subject:* ${subject}\n` +
+      `💬 *Description:* ${note}`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textMessage)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   if (!TeamDetails) {

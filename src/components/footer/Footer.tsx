@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import arrowUp from "../../images/arrow-up-black.svg";
-import airplane from "../../images/air-plane.svg";
 import footerShape from "../../images/footer-shape.png";
 
 const Footer: React.FC = () => {

@@ -34,9 +34,17 @@ const ContactForm: React.FC = () => {
   });
 
   const onSubmit = async (data: FormData) => {
-    console.log("Bronco Enquiry submitted:", data);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    alert("Thank you for contacting Bronco Cleaning Services Dubai! Our team will contact you shortly.");
+    const whatsappNumber = "918078311399";
+    const textMessage = `*New Cleaning Enquiry - Bronco Cleaning Services*\n\n` +
+      `👤 *Name:* ${data.name}\n` +
+      `📧 *Email:* ${data.email}\n` +
+      `📞 *Phone:* ${data.phone}\n` +
+      `🧹 *Service Needed:* ${data.service || "Not Specified"}\n` +
+      `📍 *Location:* ${data.location || "Not Specified"}\n` +
+      `💬 *Message:* ${data.message}`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textMessage)}`;
+    window.open(whatsappUrl, "_blank");
     reset();
   };
 

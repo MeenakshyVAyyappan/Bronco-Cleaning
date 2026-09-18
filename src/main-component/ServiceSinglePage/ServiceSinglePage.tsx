@@ -233,7 +233,7 @@ const ServiceSinglePage: React.FC = () => {
                     <span>+971 054 148 4800</span>
                   </a>
 
-                  <a href="https://wa.me/9710541484800" target="_blank" rel="noopener noreferrer" className="btn btn-success w-100 mt-3" style={{ borderRadius: "20px", fontWeight: "600" }}>
+                  <a href="https://wa.me/918078311399" target="_blank" rel="noopener noreferrer" className="btn btn-success w-100 mt-3" style={{ borderRadius: "20px", fontWeight: "600" }}>
                     <i className="fa fa-whatsapp me-2"></i> WhatsApp Enquiry
                   </a>
 

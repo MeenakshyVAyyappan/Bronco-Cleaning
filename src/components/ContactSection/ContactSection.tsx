@@ -31,9 +31,16 @@ const ContactSection: React.FC = () => {
     });
 
     const onSubmit = async (data: FormData) => {
-        console.log("Bronco Quick Booking:", data);
-        await new Promise((resolve) => setTimeout(resolve, 1200));
-        alert("Booking submitted successfully! Bronco team will reach out shortly.");
+        const whatsappNumber = "918078311399";
+        const textMessage = `*Quick Booking Request - Bronco Cleaning Services*\n\n` +
+            `👤 *Name:* ${data.name}\n` +
+            `📧 *Email:* ${data.email}\n` +
+            `🧹 *Service Category:* ${data.subject}\n` +
+            `📅 *Preferred Date:* ${data.date || "Not Specified"}\n` +
+            `⏰ *Preferred Time:* ${data.time || "Not Specified"}`;
+
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textMessage)}`;
+        window.open(whatsappUrl, "_blank");
         reset();
     };
 
