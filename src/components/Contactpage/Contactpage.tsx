@@ -48,10 +48,10 @@ const Contactpage: React.FC = () => {
                   <div className="office-info-text">
                     <h2>Phone & WhatsApp</h2>
                     <p>
-                      +91 80783 11399
+                      +971 054 148 4800
                     </p>
                     <a
-                      href="https://wa.me/918078311399"
+                      href="https://wa.me/971541484800"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-sm btn-success mt-2"

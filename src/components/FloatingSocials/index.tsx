@@ -7,7 +7,7 @@ const FloatingSocials: React.FC = () => {
       <a href="tel:+9710541484800" className="social-btn phone-btn" aria-label="Call Us">
         <i className="fa fa-phone"></i>
       </a>
-      <a href="https://wa.me/918078311399" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp-btn" aria-label="WhatsApp Us">
+      <a href="https://wa.me/971541484800" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp-btn" aria-label="WhatsApp Us">
         <i className="fa fa-whatsapp"></i>
       </a>
       <a href="https://instagram.com/broncocleaning" target="_blank" rel="noopener noreferrer" className="social-btn instagram-btn" aria-label="Instagram">
