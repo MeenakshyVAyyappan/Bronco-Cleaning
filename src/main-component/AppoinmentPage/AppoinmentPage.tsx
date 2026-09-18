@@ -17,18 +17,51 @@ import useSplitTextAnimation from "../../components/splittextAnimation/useSplitT
 
 // Validation Schema
 const schema = z.object({
-  name: z.string().min(3, "Name must be at least 3 characters"),
-  email: z.string().email("Enter a valid email"),
-  service: z.string().min(1, "Please select a service"),
-  approx: z.string().optional(),
+  name: z.string().min(1, "Full Name is required").max(25, "Full Name must not exceed 25 characters"),
+  email: z.string().min(1, "Email Address is required").email("Enter a valid email address"),
+  phone: z.string().min(6, "Valid Phone Number is required"),
+  location: z.string().min(1, "Please select a Dubai Location Area"),
+  service: z.string().min(1, "Please select a Cleaning Service"),
+  approxSqFt: z.string().min(1, "Approximate Square Feet is required").regex(/^[0-9]+$/, "Must be a valid number"),
   bed: z.string().optional(),
   bath: z.string().optional(),
-  phone: z.string().min(6, "Enter a valid phone number"),
   zip: z.string().optional(),
   note: z.string().optional(),
 });
 
 type FormData = z.infer<typeof schema>;
+
+const dubailandAreas = [
+  "Al Safa", "Jumeirah", "Downtown Dubai", "DIFC", "City Walk", 
+  "Business Bay", "Nad Al Sheba", "Sheikh Zayed Road", "Al Quoz", 
+  "Al Sufouh", "Dubai Hills", "Arabian Ranches", "Dubai Sports City", 
+  "Motor City", "Al Barsha", "Jumeirah Golf Estates", "Emirates Hills", 
+  "Palm Jumeirah", "JLT", "Dubai Marina", "Jumeirah Park", "Palm Jebel Ali", "Jebel Ali Free Zone"
+];
+
+const cleaningServices = [
+  "Deep Cleaning Services Dubai",
+  "Home Cleaning Services",
+  "Office & Workplace Cleaning",
+  "Warehouse Cleaning Services",
+  "Aviation Warehouse Cleaning Services",
+  "Moving-In & Moving-Out Cleaning",
+  "After Builder Cleaning Services",
+  "Airbnb Cleaning Services",
+  "Hourly Cleaning Services",
+  "Daily Cleaning Services",
+  "Monthly Cleaning Services",
+  "Event Cleaning Services",
+  "Hospital Cleaning Services",
+  "Laboratory Cleaning Services",
+  "After Party Cleaning Services",
+  "Specialized Deep Cleaning Services",
+  "Gym Cleaning Services",
+  "Garage Deep Cleaning Services",
+  "Maid Services",
+  "Outdoor Cleaning Services",
+  "Sofa Cleaning Services"
+];
 
 const AppoinmentPage: React.FC = () => {
 
@@ -47,8 +80,9 @@ const AppoinmentPage: React.FC = () => {
       `👤 *Name:* ${data.name}\n` +
       `📧 *Email:* ${data.email}\n` +
       `📞 *Phone:* ${data.phone}\n` +
+      `📍 *Dubai Location:* ${data.location}\n` +
       `🧹 *Service:* ${data.service}\n` +
-      `📐 *Approx SF:* ${data.approx || "N/A"}\n` +
+      `📐 *Approx Sq Ft:* ${data.approxSqFt} sq ft\n` +
       `🛏️ *Bedrooms:* ${data.bed || "N/A"}\n` +
       `🛁 *Bathrooms:* ${data.bath || "N/A"}\n` +
       `📮 *Zip Code:* ${data.zip || "N/A"}\n` +
@@ -96,134 +130,126 @@ const AppoinmentPage: React.FC = () => {
                     <div className="row">
 
                       {/* NAME */}
-                      <div className="col col-lg-6 col-12">
-
+                      <div className="col col-lg-6 col-12 mb-3">
                         <input
                           {...register("name")}
                           className="form-control"
-                          placeholder="Your Name"
+                          maxLength={25}
+                          placeholder="Your Full Name*"
                         />
-
                         {errors.name && (
-                          <p className="error">{errors.name.message}</p>
+                          <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.name.message}</p>
                         )}
-
                       </div>
 
                       {/* EMAIL */}
-                      <div className="col col-lg-6 col-12">
-
+                      <div className="col col-lg-6 col-12 mb-3">
                         <input
                           {...register("email")}
                           className="form-control"
-                          placeholder="Your Email"
+                          placeholder="Your Email*"
                         />
-
                         {errors.email && (
-                          <p className="error">{errors.email.message}</p>
+                          <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.email.message}</p>
                         )}
-
-                      </div>
-
-                      {/* SERVICE */}
-                      <div className="col col-lg-6 col-12">
-
-                        <select {...register("service")} className="form-control">
-                          <option value="">Choose a Service</option>
-                          <option>Residential Cleaning</option>
-                          <option>Commercial Cleaning</option>
-                          <option>Office Cleaning</option>
-                          <option>Home Cleaning</option>
-                          <option>Shop Cleaning</option>
-                          <option>Road Cleaning</option>
-                          <option>Car Cleaning</option>
-                        </select>
-
-                        {errors.service && (
-                          <p className="error">{errors.service.message}</p>
-                        )}
-
-                      </div>
-
-                      {/* APPROX */}
-                      <div className="col col-lg-6 col-12">
-
-                        <select {...register("approx")} className="form-control">
-                          <option value="">Approx SF</option>
-                          <option>800</option>
-                          <option>700</option>
-                          <option>900</option>
-                          <option>500</option>
-                          <option>300</option>
-                        </select>
-
-                      </div>
-
-                      {/* BEDROOMS */}
-                      <div className="col col-lg-6 col-12">
-
-                        <select {...register("bed")} className="form-control">
-                          <option value="">Bedrooms</option>
-                          <option>Residential</option>
-                          <option>Commercial</option>
-                          <option>Apartment</option>
-                        </select>
-
-                      </div>
-
-                      {/* BATHROOMS */}
-                      <div className="col col-lg-6 col-12">
-
-                        <select {...register("bath")} className="form-control">
-                          <option value="">Bathrooms</option>
-                          <option>Residential</option>
-                          <option>Commercial</option>
-                          <option>Apartment</option>
-                        </select>
-
                       </div>
 
                       {/* PHONE */}
-                      <div className="col col-lg-6 col-12">
-
+                      <div className="col col-lg-6 col-12 mb-3">
                         <input
                           {...register("phone")}
                           className="form-control"
-                          placeholder="Phone"
+                          placeholder="Phone Number (+971)*"
                         />
-
                         {errors.phone && (
-                          <p className="error">{errors.phone.message}</p>
+                          <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.phone.message}</p>
                         )}
-
                       </div>
 
-                      {/* ZIP */}
-                      <div className="col col-lg-6 col-12">
+                      {/* APPROX SQ FT */}
+                      <div className="col col-lg-6 col-12 mb-3">
+                        <input
+                          {...register("approxSqFt")}
+                          className="form-control"
+                          type="number"
+                          placeholder="Approx Sq Ft (e.g. 1000)*"
+                        />
+                        {errors.approxSqFt && (
+                          <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.approxSqFt.message}</p>
+                        )}
+                      </div>
 
+                      {/* SERVICE */}
+                      <div className="col col-lg-12 col-12 mb-3">
+                        <select {...register("service")} className="form-control">
+                          <option value="">Select Cleaning Service*</option>
+                          {cleaningServices.map((srv, idx) => (
+                            <option key={idx} value={srv}>{srv}</option>
+                          ))}
+                        </select>
+                        {errors.service && (
+                          <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.service.message}</p>
+                        )}
+                      </div>
+
+                      {/* DUBAI LOCATION */}
+                      <div className="col col-lg-12 col-12 mb-3">
+                        <select {...register("location")} className="form-control">
+                          <option value="">Select Dubai Location Area*</option>
+                          {dubailandAreas.map((area, idx) => (
+                            <option key={idx} value={area}>{area}</option>
+                          ))}
+                        </select>
+                        {errors.location && (
+                          <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.location.message}</p>
+                        )}
+                      </div>
+
+                      {/* BEDROOMS */}
+                      <div className="col col-lg-6 col-12 mb-3">
+                        <select {...register("bed")} className="form-control">
+                          <option value="">Bedrooms (Optional)</option>
+                          <option>Studio</option>
+                          <option>1 Bedroom</option>
+                          <option>2 Bedrooms</option>
+                          <option>3 Bedrooms</option>
+                          <option>4+ Bedrooms</option>
+                          <option>Commercial Premises</option>
+                        </select>
+                      </div>
+
+                      {/* BATHROOMS */}
+                      <div className="col col-lg-6 col-12 mb-3">
+                        <select {...register("bath")} className="form-control">
+                          <option value="">Bathrooms (Optional)</option>
+                          <option>1 Bathroom</option>
+                          <option>2 Bathrooms</option>
+                          <option>3 Bathrooms</option>
+                          <option>4+ Bathrooms</option>
+                        </select>
+                      </div>
+
+                      {/* ZIP CODE */}
+                      <div className="col col-lg-12 col-12 mb-3">
                         <input
                           {...register("zip")}
                           className="form-control"
-                          placeholder="Zip Code"
+                          placeholder="Zip / Postal Code (Optional)"
                         />
-
                       </div>
 
                       {/* MESSAGE */}
-                      <div className="col fullwidth col-lg-12">
-
+                      <div className="col fullwidth col-lg-12 mb-3">
                         <textarea
                           {...register("note")}
                           className="form-control"
-                          placeholder="Message"
+                          placeholder="Message / Specific Requirements (Optional)"
                         />
-
                       </div>
 
                     </div>
 
                     <div className="submit-area">
-
                       <button
                         type="submit"
                         className="theme-btn"
@@ -231,7 +257,6 @@ const AppoinmentPage: React.FC = () => {
                       >
                         {isSubmitting ? "Submitting..." : "Submit Request"}
                       </button>
-
                     </div>
 
                   </form>

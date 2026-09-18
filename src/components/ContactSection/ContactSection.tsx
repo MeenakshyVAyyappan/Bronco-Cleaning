@@ -10,14 +10,49 @@ import logo1 from "../../images/contact-logo1.png";
 import logo2 from "../../images/contact-logo2.png";
 
 const schema = z.object({
-    name: z.string().min(3, "Name must be at least 3 characters"),
-    email: z.string().email("Enter a valid email"),
-    subject: z.string().min(1, "Please select a service"),
+    name: z.string().min(1, "Full Name is required").max(25, "Full Name must not exceed 25 characters"),
+    email: z.string().min(1, "Email Address is required").email("Enter a valid email address"),
+    phone: z.string().min(6, "Valid Phone Number is required"),
+    location: z.string().min(1, "Please select a Dubai Location Area"),
+    subject: z.string().min(1, "Please select a Cleaning Service"),
+    approxSqFt: z.string().min(1, "Approximate Square Feet is required").regex(/^[0-9]+$/, "Must be a valid number"),
     date: z.string().optional(),
     time: z.string().optional(),
 });
 
 type FormData = z.infer<typeof schema>;
+
+const dubailandAreas = [
+    "Al Safa", "Jumeirah", "Downtown Dubai", "DIFC", "City Walk", 
+    "Business Bay", "Nad Al Sheba", "Sheikh Zayed Road", "Al Quoz", 
+    "Al Sufouh", "Dubai Hills", "Arabian Ranches", "Dubai Sports City", 
+    "Motor City", "Al Barsha", "Jumeirah Golf Estates", "Emirates Hills", 
+    "Palm Jumeirah", "JLT", "Dubai Marina", "Jumeirah Park", "Palm Jebel Ali", "Jebel Ali Free Zone"
+];
+
+const cleaningServices = [
+    "Deep Cleaning Services Dubai",
+    "Home Cleaning Services",
+    "Office & Workplace Cleaning",
+    "Warehouse Cleaning Services",
+    "Aviation Warehouse Cleaning Services",
+    "Moving-In & Moving-Out Cleaning",
+    "After Builder Cleaning Services",
+    "Airbnb Cleaning Services",
+    "Hourly Cleaning Services",
+    "Daily Cleaning Services",
+    "Monthly Cleaning Services",
+    "Event Cleaning Services",
+    "Hospital Cleaning Services",
+    "Laboratory Cleaning Services",
+    "After Party Cleaning Services",
+    "Specialized Deep Cleaning Services",
+    "Gym Cleaning Services",
+    "Garage Deep Cleaning Services",
+    "Maid Services",
+    "Outdoor Cleaning Services",
+    "Sofa Cleaning Services"
+];
 
 const ContactSection: React.FC = () => {
 
@@ -35,7 +70,10 @@ const ContactSection: React.FC = () => {
         const textMessage = `*Quick Booking Request - Bronco Cleaning Services*\n\n` +
             `👤 *Name:* ${data.name}\n` +
             `📧 *Email:* ${data.email}\n` +
+            `📞 *Phone:* ${data.phone}\n` +
+            `📍 *Dubai Location:* ${data.location}\n` +
             `🧹 *Service Category:* ${data.subject}\n` +
+            `📐 *Approx Sq Ft:* ${data.approxSqFt} sq ft\n` +
             `📅 *Preferred Date:* ${data.date || "Not Specified"}\n` +
             `⏰ *Preferred Time:* ${data.time || "Not Specified"}`;
 
@@ -131,47 +169,84 @@ const ContactSection: React.FC = () => {
 
                                     <div className="row">
 
-                                        <div className="col-lg-6 col-12">
+                                        {/* FULL NAME */}
+                                        <div className="col-lg-6 col-12 mb-3">
                                             <input
                                                 {...register("name")}
                                                 className="form-control"
-                                                placeholder="Your Name*"
+                                                maxLength={25}
+                                                placeholder="Your Full Name*"
                                             />
                                             {errors.name && (
-                                                <p className="error">{errors.name.message}</p>
+                                                <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.name.message}</p>
                                             )}
                                         </div>
 
-                                        <div className="col-lg-6 col-12">
+                                        {/* EMAIL */}
+                                        <div className="col-lg-6 col-12 mb-3">
                                             <input
                                                 {...register("email")}
                                                 className="form-control"
                                                 placeholder="Your Email*"
                                             />
                                             {errors.email && (
-                                                <p className="error">{errors.email.message}</p>
+                                                <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.email.message}</p>
                                             )}
                                         </div>
 
-                                        <div className="col-lg-12 col-12">
+                                        {/* PHONE NUMBER */}
+                                        <div className="col-lg-6 col-12 mb-3">
+                                            <input
+                                                {...register("phone")}
+                                                className="form-control"
+                                                placeholder="Phone Number (+971)*"
+                                            />
+                                            {errors.phone && (
+                                                <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.phone.message}</p>
+                                            )}
+                                        </div>
+
+                                        {/* APPROX SF */}
+                                        <div className="col-lg-6 col-12 mb-3">
+                                            <input
+                                                {...register("approxSqFt")}
+                                                className="form-control"
+                                                type="number"
+                                                placeholder="Approx Sq Ft (e.g. 1000)*"
+                                            />
+                                            {errors.approxSqFt && (
+                                                <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.approxSqFt.message}</p>
+                                            )}
+                                        </div>
+
+                                        {/* SERVICE */}
+                                        <div className="col-lg-12 col-12 mb-3">
                                             <select {...register("subject")} className="form-control">
-                                                <option value="">Select Service Category</option>
-                                                <option>Deep Cleaning Services Dubai</option>
-                                                <option>Home Cleaning Services</option>
-                                                <option>Office & Workplace Cleaning</option>
-                                                <option>Warehouse Cleaning Services</option>
-                                                <option>Aviation Warehouse Cleaning Services</option>
-                                                <option>Moving-In & Moving-Out Cleaning</option>
-                                                <option>Airbnb Cleaning Services</option>
-                                                <option>Maid Services</option>
-                                                <option>Sofa & Carpet Cleaning</option>
+                                                <option value="">Select Service Category*</option>
+                                                {cleaningServices.map((srv, idx) => (
+                                                    <option key={idx} value={srv}>{srv}</option>
+                                                ))}
                                             </select>
                                             {errors.subject && (
-                                                <p className="error">{errors.subject.message}</p>
+                                                <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.subject.message}</p>
                                             )}
                                         </div>
 
-                                        <div className="col-lg-6 col-12">
+                                        {/* DUBAI LOCATION */}
+                                        <div className="col-lg-12 col-12 mb-3">
+                                            <select {...register("location")} className="form-control">
+                                                <option value="">Select Dubai Location Area*</option>
+                                                {dubailandAreas.map((area, idx) => (
+                                                    <option key={idx} value={area}>{area}</option>
+                                                ))}
+                                            </select>
+                                            {errors.location && (
+                                                <p className="error" style={{ color: "red", fontSize: "13px" }}>{errors.location.message}</p>
+                                            )}
+                                        </div>
+
+                                        {/* PREFERRED DATE */}
+                                        <div className="col-lg-6 col-12 mb-3">
                                             <input
                                                 type="date"
                                                 {...register("date")}
@@ -179,7 +254,8 @@ const ContactSection: React.FC = () => {
                                             />
                                         </div>
 
-                                        <div className="col-lg-6 col-12">
+                                        {/* PREFERRED TIME */}
+                                        <div className="col-lg-6 col-12 mb-3">
                                             <input
                                                 type="time"
                                                 {...register("time")}
@@ -190,7 +266,6 @@ const ContactSection: React.FC = () => {
 
                                         <div className="col-lg-12 col-12">
                                             <div className="submit-area">
-
                                                 <button
                                                     type="submit"
                                                     className="theme-btn-s2"
@@ -198,7 +273,6 @@ const ContactSection: React.FC = () => {
                                                 >
                                                     {isSubmitting ? "Submitting..." : "Book Cleaning Service Today"}
                                                 </button>
-
                                             </div>
                                         </div>
 

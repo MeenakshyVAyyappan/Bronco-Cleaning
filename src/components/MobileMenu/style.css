@@ -164,3 +164,13 @@
 .responsivemenu a:not([href]):not([class]):hover{
  color: #ddd;
 }
+
+/* Active Mobile Menu Styling */
+.responsivemenu li a.active,
+.responsivemenu li p.active,
+.responsivemenu ul.subMenu li a.active {
+    color: #7C9473 !important;
+    font-weight: 700 !important;
+    background-color: rgba(124, 148, 115, 0.15) !important;
+    border-left: 4px solid #7C9473 !important;
+}

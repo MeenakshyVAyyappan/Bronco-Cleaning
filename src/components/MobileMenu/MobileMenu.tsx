@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Collapse from "@mui/material/Collapse";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 
 interface SubMenuItem {
@@ -66,10 +66,18 @@ const menus: MenuItem[] = [
 const MobileMenu: React.FC = () => {
   const [openId, setOpenId] = useState<number>(0);
   const [menuActive, setMenuState] = useState<boolean>(false);
+  const location = useLocation();
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
     setMenuState(false);
+  };
+
+  const isPathActive = (targetLink: string, submenu?: SubMenuItem[]) => {
+    if (targetLink === "/") return location.pathname === "/";
+    if (location.pathname === targetLink || location.pathname.startsWith(targetLink + "/")) return true;
+    if (submenu && submenu.some(sub => location.pathname === sub.link || location.pathname.startsWith(sub.link + "/"))) return true;
+    return false;
   };
 
   return (
@@ -82,47 +90,53 @@ const MobileMenu: React.FC = () => {
         </div>
 
         <ul className="responsivemenu">
-          {menus.map((item) => (
-            <ListItem
-              className={item.id === openId ? "active" : ""}
-              key={item.id}
-            >
-              {item.submenu ? (
-                <Fragment>
-                  <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>
-                    {item.title}
-                    <i
-                      className={
-                        item.id === openId
-                          ? "fa fa-angle-up"
-                          : "fa fa-angle-down"
-                      }
-                    ></i>
-                  </p>
+          {menus.map((item) => {
+            const active = isPathActive(item.link, item.submenu);
+            return (
+              <ListItem
+                className={`${item.id === openId ? "active-submenu" : ""} ${active ? "active" : ""}`.trim()}
+                key={item.id}
+              >
+                {item.submenu ? (
+                  <Fragment>
+                    <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)} className={active ? "active" : ""}>
+                      {item.title}
+                      <i
+                        className={
+                          item.id === openId
+                            ? "fa fa-angle-up"
+                            : "fa fa-angle-down"
+                        }
+                      ></i>
+                    </p>
 
-                  <Collapse
-                    in={item.id === openId}
-                    timeout="auto"
-                    unmountOnExit
-                  >
-                    <List className="subMenu">
-                      {item.submenu.map((submenu) => (
-                        <ListItem key={submenu.id}>
-                          <Link onClick={ClickHandler} to={submenu.link}>
-                            {submenu.title}
-                          </Link>
-                        </ListItem>
-                      ))}
-                    </List>
-                  </Collapse>
-                </Fragment>
-              ) : (
-                <Link onClick={ClickHandler} to={item.link}>
-                  {item.title}
-                </Link>
-              )}
-            </ListItem>
-          ))}
+                    <Collapse
+                      in={item.id === openId}
+                      timeout="auto"
+                      unmountOnExit
+                    >
+                      <List className="subMenu">
+                        {item.submenu.map((submenu) => {
+                          const subActive = location.pathname === submenu.link;
+                          return (
+                            <ListItem key={submenu.id} className={subActive ? "active" : ""}>
+                              <Link onClick={ClickHandler} to={submenu.link} className={subActive ? "active" : ""}>
+                                {submenu.title}
+                              </Link>
+                            </ListItem>
+                          );
+                        })}
+                      </List>
+                    </Collapse>
+                  </Fragment>
+                ) : (
+                  <Link onClick={ClickHandler} to={item.link} className={active ? "active" : ""}>
+                    {item.title}
+                  </Link>
+                )}
+              </ListItem>
+            );
+          })}
         </ul>
       </div>
 

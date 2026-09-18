@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 import { useParams } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import Navbar2 from "../../components/Navbar2/Navbar2";
 import PageTitle from "../../components/pagetitle/PageTitle";
@@ -8,10 +11,49 @@ import Scrollbar from "../../components/scrollbar/scrollbar";
 
 import teamMembers from "../../api/team";
 
-import certificate1 from "../../images/certificate/1.jpg";
-import certificate2 from "../../images/certificate/2.jpg";
-import certificate3 from "../../images/certificate/3.jpg";
-import certificate4 from "../../images/certificate/4.jpg";
+const schema = z.object({
+  name: z.string().min(1, "Full Name is required").max(25, "Full Name must not exceed 25 characters"),
+  email: z.string().min(1, "Email Address is required").email("Enter a valid email address"),
+  phone: z.string().min(6, "Valid Phone Number is required"),
+  location: z.string().min(1, "Please select a Dubai Location Area"),
+  service: z.string().min(1, "Please select a Cleaning Service"),
+  approxSqFt: z.string().min(1, "Approximate Square Feet is required").regex(/^[0-9]+$/, "Must be a valid number"),
+  note: z.string().optional(),
+});
+
+type FormData = z.infer<typeof schema>;
+
+const dubailandAreas = [
+  "Al Safa", "Jumeirah", "Downtown Dubai", "DIFC", "City Walk", 
+  "Business Bay", "Nad Al Sheba", "Sheikh Zayed Road", "Al Quoz", 
+  "Al Sufouh", "Dubai Hills", "Arabian Ranches", "Dubai Sports City", 
+  "Motor City", "Al Barsha", "Jumeirah Golf Estates", "Emirates Hills", 
+  "Palm Jumeirah", "JLT", "Dubai Marina", "Jumeirah Park", "Palm Jebel Ali", "Jebel Ali Free Zone"
+];
+
+const cleaningServices = [
+  "Deep Cleaning Services Dubai",
+  "Home Cleaning Services",
+  "Office & Workplace Cleaning",
+  "Warehouse Cleaning Services",
+  "Aviation Warehouse Cleaning Services",
+  "Moving-In & Moving-Out Cleaning",
+  "After Builder Cleaning Services",
+  "Airbnb Cleaning Services",
+  "Hourly Cleaning Services",
+  "Daily Cleaning Services",
+  "Monthly Cleaning Services",
+  "Event Cleaning Services",
+  "Hospital Cleaning Services",
+  "Laboratory Cleaning Services",
+  "After Party Cleaning Services",
+  "Specialized Deep Cleaning Services",
+  "Gym Cleaning Services",
+  "Garage Deep Cleaning Services",
+  "Maid Services",
+  "Outdoor Cleaning Services",
+  "Sofa Cleaning Services"
+];
 
 const TeamSinglePage: React.FC = () => {
 
@@ -21,25 +63,29 @@ const TeamSinglePage: React.FC = () => {
     (item) => item.slug === slug
   );
 
-  const SubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string || "N/A";
-    const email = formData.get("email") as string || "N/A";
-    const phone = formData.get("phone") as string || "N/A";
-    const subject = formData.get("subject") as string || "N/A";
-    const note = formData.get("note") as string || "N/A";
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting }
+  } = useForm<FormData>({
+    resolver: zodResolver(schema)
+  });
 
+  const onSubmit = async (data: FormData) => {
     const whatsappNumber = "971541484800";
     const textMessage = `*Appointment Enquiry - Bronco Cleaning Services*\n\n` +
-      `👤 *Name:* ${name}\n` +
-      `📧 *Email:* ${email}\n` +
-      `📞 *Phone:* ${phone}\n` +
-      `📋 *Subject:* ${subject}\n` +
-      `💬 *Description:* ${note}`;
+      `👤 *Name:* ${data.name}\n` +
+      `📧 *Email:* ${data.email}\n` +
+      `📞 *Phone:* ${data.phone}\n` +
+      `📍 *Dubai Location:* ${data.location}\n` +
+      `🧹 *Service:* ${data.service}\n` +
+      `📐 *Approx Sq Ft:* ${data.approxSqFt} sq ft\n` +
+      (data.note ? `💬 *Description:* ${data.note}` : ``);
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textMessage)}`;
     window.open(whatsappUrl, "_blank");
+    reset();
   };
 
   if (!TeamDetails) {
@@ -68,192 +114,29 @@ const TeamSinglePage: React.FC = () => {
 
               <div className="row align-items-center">
 
-                <div className="col-lg-5">
-
+                <div className="col-lg-6 col-12">
                   <div className="team-info-img">
                     <img src={TeamDetails.image} alt={TeamDetails.name} />
                   </div>
-
                 </div>
 
-                <div className="col-lg-7">
-
+                <div className="col-lg-6 col-12">
                   <div className="team-info-text">
 
                     <h2>{TeamDetails.name}</h2>
-
-                    <ul>
-                      <li>Position: <span>{TeamDetails.role}</span></li>
-                      <li>Practice Area: <span>Residential & Commercial Cleaning</span></li>
-                      <li>Experience: <span>5+ Years in UAE</span></li>
-                      <li>Address: <span>Dubai, United Arab Emirates</span></li>
-                      <li>Phone: <span>+971 4 123 4567</span></li>
-                      <li>Email: <span>info@broncocleaning.ae</span></li>
-                    </ul>
-
-                    {/* CERTIFICATES */}
-                    <div className="certificates-wrap">
-
-                      <h2>Certificates</h2>
-
-                      <div className="certificates-items">
-
-                        <div className="certificates-item">
-                          <img src={certificate1} alt="" />
-                        </div>
-
-                        <div className="certificates-item">
-                          <img src={certificate2} alt="" />
-                        </div>
-
-                        <div className="certificates-item">
-                          <img src={certificate3} alt="" />
-                        </div>
-
-                        <div className="certificates-item">
-                          <img src={certificate4} alt="" />
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            {/* EXPERIENCE */}
-            <div className="team-exprience-area team-widget">
-
-              <div className="row">
-
-                <div className="col-lg-6">
-
-                  <div className="exprience-wrap">
-
-                    <h2>Personal Experience</h2>
+                    <span>{TeamDetails.role}</span>
 
                     <p>
-                      A highly dedicated professional with extensive experience in delivering top-tier cleaning services across Dubai.
-                      Committed to maintaining the highest standards of hygiene and customer satisfaction for both residential and commercial spaces.
+                      Professional cleaner at Bronco Cleaning Services Dubai, committed to delivering high-quality residential and commercial cleaning solutions across Dubai.
                     </p>
-
-                    <p>
-                      Expert in using advanced cleaning equipment, eco-friendly products, and adhering to strict safety protocols to ensure a pristine environment.
-                    </p>
-
-                  </div>
-
-                </div>
-
-
-                <div className="col-lg-6">
-
-                  <div className="education-area">
-
-                    <h2>Training & Certifications</h2>
 
                     <ul>
-
-                      <li>BICS (British Institute of Cleaning Science) Certified</li>
-                      <li>Advanced Health and Safety Training, Dubai</li>
-                      <li>Eco-Friendly Cleaning Protocols Certification</li>
-                      <li>Professional Housekeeping Management</li>
-                      <li>First Aid and Emergency Response</li>
-
+                      <li>Experience: <span>5+ Years</span></li>
+                      <li>Email: <span>contact@broncocleaning.ae</span></li>
+                      <li>Phone: <span>+971 054 148 4800</span></li>
                     </ul>
 
                   </div>
-
-                </div>
-
-              </div>
-
-
-              {/* SKILLS */}
-              <div className="skills-area">
-
-                <div className="row">
-
-                  <div className="col-lg-6">
-
-                    <div className="exprience-wrap">
-
-                      <h2>Skills</h2>
-
-                      <div className="wpo-skill-progress">
-
-                        <div className="wpo-progress-single">
-
-                          <h5 className="progress-title">Office Cleaning</h5>
-
-                          <div className="progress">
-                            <div className="progress-bar" style={{ width: "85%" }}></div>
-                          </div>
-
-                          <span className="progress-number">85%</span>
-
-                        </div>
-
-
-                        <div className="wpo-progress-single">
-
-                          <h5 className="progress-title">Home Cleaning</h5>
-
-                          <div className="progress">
-                            <div className="progress-bar" style={{ width: "80%" }}></div>
-                          </div>
-
-                          <span className="progress-number">80%</span>
-
-                        </div>
-
-
-                        <div className="wpo-progress-single">
-
-                          <h5 className="progress-title">Bedroom Cleaning</h5>
-
-                          <div className="progress">
-                            <div className="progress-bar" style={{ width: "95%" }}></div>
-                          </div>
-
-                          <span className="progress-number">95%</span>
-
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-
-                  <div className="col-lg-6">
-
-                    <div className="education-area ex-wiget">
-
-                      <h2>Achievements</h2>
-
-                      <ul>
-
-                        <li>Employee of the Year 2023 - Bronco Cleaning</li>
-                        <li>100+ 5-Star Customer Reviews</li>
-                        <li>Outstanding Service Excellence Award</li>
-                        <li>Top Rated Professional in Dubai Marina</li>
-                        <li>Zero Safety Incidents Record</li>
-                        <li>Special Recognition for Deep Cleaning</li>
-
-                      </ul>
-
-                    </div>
-
-                  </div>
-
                 </div>
 
               </div>
@@ -262,14 +145,14 @@ const TeamSinglePage: React.FC = () => {
 
 
             {/* CONTACT FORM */}
-            <div className="wpo-contact-area ex-wiget">
+            <div className="wpo-contact-area ex-wiget mt-5">
 
               <div className="wpo-contact-title">
 
                 <h2>Make an Appointment</h2>
 
                 <p>
-                  Do not put off until tomorrow the problems that need to be solved today.
+                  Fill out the form below to book a cleaning service with our team.
                 </p>
 
               </div>
@@ -277,42 +160,104 @@ const TeamSinglePage: React.FC = () => {
 
               <div className="quote-form">
 
-                <form onSubmit={SubmitHandler}>
+                <form onSubmit={handleSubmit(onSubmit)}>
 
-                  <div className="form-group half-col">
-                    <input type="text" className="form-control" placeholder="Name:" name="name" />
-                  </div>
+                  <div className="row">
 
-                  <div className="form-group half-col">
-                    <input type="email" className="form-control" placeholder="Email:" name="email" />
-                  </div>
+                    {/* NAME */}
+                    <div className="col-lg-6 col-12 mb-3">
+                      <input
+                        {...register("name")}
+                        type="text"
+                        className="form-control"
+                        maxLength={25}
+                        placeholder="Full Name (Max 25 chars)*"
+                      />
+                      {errors.name && (
+                        <p className="error" style={{ color: "red", fontSize: "13px", marginTop: "4px" }}>{errors.name.message}</p>
+                      )}
+                    </div>
 
-                  <div className="form-group half-col">
-                    <input type="text" className="form-control" placeholder="Phone" name="phone" />
-                  </div>
+                    {/* EMAIL */}
+                    <div className="col-lg-6 col-12 mb-3">
+                      <input
+                        {...register("email")}
+                        type="email"
+                        className="form-control"
+                        placeholder="Email Address*"
+                      />
+                      {errors.email && (
+                        <p className="error" style={{ color: "red", fontSize: "13px", marginTop: "4px" }}>{errors.email.message}</p>
+                      )}
+                    </div>
 
-                  <div className="form-group half-col">
+                    {/* PHONE */}
+                    <div className="col-lg-6 col-12 mb-3">
+                      <input
+                        {...register("phone")}
+                        type="tel"
+                        className="form-control"
+                        placeholder="Phone Number (+971)*"
+                      />
+                      {errors.phone && (
+                        <p className="error" style={{ color: "red", fontSize: "13px", marginTop: "4px" }}>{errors.phone.message}</p>
+                      )}
+                    </div>
 
-                    <select name="subject" className="form-control" defaultValue="Subject">
+                    {/* APPROX SQ FT */}
+                    <div className="col-lg-6 col-12 mb-3">
+                      <input
+                        {...register("approxSqFt")}
+                        type="number"
+                        className="form-control"
+                        placeholder="Approx Sq Ft (e.g. 1000)*"
+                      />
+                      {errors.approxSqFt && (
+                        <p className="error" style={{ color: "red", fontSize: "13px", marginTop: "4px" }}>{errors.approxSqFt.message}</p>
+                      )}
+                    </div>
 
-                      <option disabled value="Subject">Subject</option>
-                      <option value="Residential Deep Cleaning">Residential Deep Cleaning</option>
-                      <option value="Commercial Office Cleaning">Commercial Office Cleaning</option>
-                      <option value="Move-In/Move-Out Cleaning">Move-In/Move-Out Cleaning</option>
-                      <option value="Specialized Sanitization">Specialized Sanitization</option>
+                    {/* SERVICE */}
+                    <div className="col-lg-12 col-12 mb-3">
+                      <select {...register("service")} className="form-control">
+                        <option value="">Select Cleaning Service*</option>
+                        {cleaningServices.map((srv, idx) => (
+                          <option key={idx} value={srv}>{srv}</option>
+                        ))}
+                      </select>
+                      {errors.service && (
+                        <p className="error" style={{ color: "red", fontSize: "13px", marginTop: "4px" }}>{errors.service.message}</p>
+                      )}
+                    </div>
 
-                    </select>
+                    {/* DUBAI LOCATION */}
+                    <div className="col-lg-12 col-12 mb-3">
+                      <select {...register("location")} className="form-control">
+                        <option value="">Select Dubai Location Area*</option>
+                        {dubailandAreas.map((area, idx) => (
+                          <option key={idx} value={area}>{area}</option>
+                        ))}
+                      </select>
+                      {errors.location && (
+                        <p className="error" style={{ color: "red", fontSize: "13px", marginTop: "4px" }}>{errors.location.message}</p>
+                      )}
+                    </div>
 
-                  </div>
+                    {/* NOTE */}
+                    <div className="col-lg-12 col-12 mb-3">
+                      <textarea
+                        {...register("note")}
+                        className="form-control"
+                        placeholder="Case Description / Specific Requirements (Optional)"
+                      ></textarea>
+                    </div>
 
-                  <div className="form-group full-col">
-                    <textarea className="form-control" name="note" placeholder="Case Description"></textarea>
-                  </div>
+                    <div className="col-lg-12 col-12 text-center">
+                      <button className="btn theme-btn-s2" type="submit" disabled={isSubmitting}>
+                        {isSubmitting ? "Submitting..." : "Appointment"}
+                      </button>
+                    </div>
 
-                  <div className="form-group full-col text-center">
-                    <button className="btn theme-btn-s2" type="submit">
-                      Appointment
-                    </button>
                   </div>
 
                 </form>

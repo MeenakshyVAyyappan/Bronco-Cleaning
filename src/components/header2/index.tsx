@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import type { FormEvent } from "react";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import MobileMenu from "../MobileMenu/MobileMenu";
 
@@ -60,8 +60,20 @@ const HeaderTwo: React.FC = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
 
   const ClickHandler = () => window.scrollTo(10, 0);
+
+  const isPathActive = (targetPath?: string, children?: SubMenuItem[]) => {
+    if (!targetPath) return false;
+    const path = location.pathname;
+    if (targetPath === "/") return path === "/" || path === "/home";
+    if (path === targetPath) return true;
+    if (targetPath !== "/" && path.startsWith(targetPath)) return true;
+    if (targetPath === "/service" && path.startsWith("/service-single")) return true;
+    if (children && children.some(child => child.path && (path === child.path || path.startsWith(child.path)))) return true;
+    return false;
+  };
 
   const SubmitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -108,55 +120,90 @@ const HeaderTwo: React.FC = () => {
 
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
 
-                    {menuItems.map((item, index) => (
-                      <li
-                        key={index}
-                        className={
-                          item.children
-                            ? "menu-item-has-children"
-                            : undefined
-                        }
-                      >
-                        {item.path ? (
-                          <Link to={item.path} onClick={ClickHandler}>{item.label}</Link>
-                        ) : (
-                          <a href="#">{item.label}</a>
-                        )}
+                    {menuItems.map((item, index) => {
+                      const active = isPathActive(item.path, item.children);
+                      const activeLinkStyle: React.CSSProperties = active
+                        ? {
+                            color: "#7C9473",
+                            fontWeight: 700,
+                            borderBottom: "3px solid #7C9473",
+                            paddingBottom: "4px",
+                          }
+                        : {};
 
-                        {item.children && (
-                          <ul className="sub-menu">
-                            {item.children.map((sub, i) => (
-                              <li
-                                key={i}
-                                className={
-                                  sub.children
-                                    ? "menu-item-has-children"
-                                    : undefined
-                                }
-                              >
-                                {sub.path ? (
-                                  <Link to={sub.path} onClick={ClickHandler}>{sub.label}</Link>
-                                ) : (
-                                  <a href="#">{sub.label}</a>
-                                )}
+                      return (
+                        <li
+                          key={index}
+                          className={`${item.children ? "menu-item-has-children" : ""} ${active ? "active" : ""}`.trim()}
+                        >
+                          {item.path ? (
+                            <Link
+                              to={item.path}
+                              onClick={ClickHandler}
+                              className={active ? "active" : ""}
+                              style={activeLinkStyle}
+                            >
+                              {item.label}
+                            </Link>
+                          ) : (
+                            <a
+                              href="#"
+                              className={active ? "active" : ""}
+                              style={activeLinkStyle}
+                            >
+                              {item.label}
+                            </a>
+                          )}
 
-                                {sub.children && (
-                                  <ul className="sub-menu">
-                                    {sub.children.map((child, j) => (
-                                      <li key={j}>
-                                        <Link to={child.path || "/"} onClick={ClickHandler}>
-                                          {child.label}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                )}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
+                          {item.children && (
+                            <ul className="sub-menu">
+                              {item.children.map((sub, i) => {
+                                const path = location.pathname;
+                                const subActive = sub.path
+                                  ? sub.path === "/"
+                                    ? path === "/"
+                                    : path === sub.path || path.startsWith(sub.path)
+                                  : false;
+
+                                const subActiveStyle: React.CSSProperties = subActive
+                                  ? {
+                                      color: "#7C9473",
+                                      fontWeight: 700,
+                                      backgroundColor: "rgba(124, 148, 115, 0.12)",
+                                    }
+                                  : {};
+
+                                return (
+                                  <li
+                                    key={i}
+                                    className={`${sub.children ? "menu-item-has-children" : ""} ${subActive ? "active" : ""}`.trim()}
+                                  >
+                                    {sub.path ? (
+                                      <Link
+                                        to={sub.path}
+                                        onClick={ClickHandler}
+                                        className={subActive ? "active" : ""}
+                                        style={subActiveStyle}
+                                      >
+                                        {sub.label}
+                                      </Link>
+                                    ) : (
+                                      <a
+                                        href="#"
+                                        className={subActive ? "active" : ""}
+                                        style={subActiveStyle}
+                                      >
+                                        {sub.label}
+                                      </a>
+                                    )}
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </li>
+                      );
+                    })}
 
                   </ul>
                 </div>
