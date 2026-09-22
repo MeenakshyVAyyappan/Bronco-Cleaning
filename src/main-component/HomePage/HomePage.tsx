@@ -7,7 +7,6 @@ import ChooseSection from '../../components/ChooseSection/ChooseSection';
 import WorkSection from '../../components/WorkSection/WorkSection';
 import FunFact from '../../components/FunFact';
 import TransformingSection from '../../components/TransformingSection/TransformingSection';
-import CTASection from '../../components/CTASection/CTASection';
 import TestimonialSection from '../../components/Testimonial/TestimonialSection';
 import ContactSection from '../../components/ContactSection/ContactSection';
 import BookingSection from '../../components/BookingSection/BookingSection';
@@ -27,7 +26,6 @@ const HomePage: React.FC = () => {
             <WorkSection />
             <FunFact />
             <TransformingSection />
-            <CTASection />
             <TestimonialSection />
             <ContactSection />
             <BookingSection />

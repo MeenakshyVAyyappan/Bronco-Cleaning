@@ -10,6 +10,9 @@ const FloatingSocials: React.FC = () => {
       <a href="https://wa.me/971541484800" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp-btn" aria-label="WhatsApp Us">
         <i className="fa fa-whatsapp"></i>
       </a>
+      <a href="mailto:info@broncocleaning.ae" className="social-btn email-btn" aria-label="Email Us">
+        <i className="fa fa-envelope"></i>
+      </a>
       <a href="https://instagram.com/broncocleaning" target="_blank" rel="noopener noreferrer" className="social-btn instagram-btn" aria-label="Instagram">
         <i className="fa fa-instagram"></i>
       </a>

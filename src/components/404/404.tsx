@@ -18,7 +18,7 @@ const Error: React.FC = () => {
                             </div>
                             <div className="error-message">
                                 <h3>Oops! Page Not Found</h3>
-                                <p className="mb-4">The page you are looking for at Bronco Cleaning Services doesn't exist or has been moved.</p>
+                                <p className="mb-4">The page you are looking for at BCS Cleaning Services doesn't exist or has been moved.</p>
                                 <Link onClick={ClickHandler} to="/" className="theme-btn">Back to Home</Link>
                             </div>
                         </div>

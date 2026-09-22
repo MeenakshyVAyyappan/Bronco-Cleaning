@@ -21,12 +21,12 @@ const BlogSidebar: React.FC = () => {
           <img src={logoImg} alt="about Bronco" />
         </div>
 
-        <h4>Bronco Cleaning Experts</h4>
+        <h4>BCS Cleaning Experts</h4>
 
         <span>Dubai Cleaning & Hygiene Insights</span>
 
         <p>
-          Positioning Bronco as Dubai's most reliable and professional cleaning company for homes, offices, and industrial facilities.
+          Positioning BCS as Dubai's most reliable and professional cleaning company for homes, offices, and industrial facilities.
         </p>
 
         <ul>

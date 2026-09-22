@@ -31,7 +31,7 @@ const CTATwoSection: React.FC = () => {
                   <div className="wpo-section-title-s2">
 
                     <h2 className="poort-text poort-in-right">
-                      Need Professional Cleaning Services in Dubai? Contact Bronco Today!
+                      Need Professional Cleaning Services in Dubai? Contact BCS Today!
                     </h2>
 
                     <p>

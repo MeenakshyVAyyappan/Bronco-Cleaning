@@ -17,9 +17,9 @@ const FaqSection: React.FC = () => {
   const faqs: FaqItem[] = [
     {
       id: 1,
-      question: "What cleaning services does Bronco Cleaning Services provide?",
+      question: "What cleaning services does BCS Cleaning Services provide?",
       answer:
-        "Bronco provides residential, commercial, industrial, and specialized cleaning services across Dubai including deep cleaning, office cleaning, maid services, warehouse cleaning, sofa cleaning, move-in/move-out cleaning, and Airbnb turnovers.",
+        "BCS provides residential, commercial, industrial, and specialized cleaning services across Dubai including deep cleaning, office cleaning, maid services, warehouse cleaning, sofa cleaning, move-in/move-out cleaning, and Airbnb turnovers.",
     },
     {
       id: 2,
@@ -85,7 +85,7 @@ const FaqSection: React.FC = () => {
                     </h2>
 
                     <p>
-                      Get quick answers to common questions regarding Bronco's cleaning solutions, service areas across Dubai, and booking plans.
+                      Get quick answers to common questions regarding BCS's cleaning solutions, service areas across Dubai, and booking plans.
                     </p>
                   </div>
 

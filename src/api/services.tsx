@@ -54,7 +54,7 @@ const services: Service[] = [
     price: "From 35 AED/hr",
     image: homeCleaning,
     intro: "Professional and reliable home cleaning solutions across Dubai tailored to keep your living space spotless and fresh.",
-    description: "Bronco Cleaning Services provides comprehensive residential cleaning designed for villas, apartments, and penthouses in Dubai. Our dedicated maids and cleaners ensure your home is completely disinfected, tidy, and welcoming.",
+    description: "BCS Cleaning Services provides comprehensive residential cleaning designed for villas, apartments, and penthouses in Dubai. Our dedicated maids and cleaners ensure your home is completely disinfected, tidy, and welcoming.",
     benefits: [
       "Spotless living rooms, bedrooms, and kitchens",
       "Flexible hourly, weekly, or monthly scheduling",
@@ -80,8 +80,8 @@ const services: Service[] = [
     slug: "office-workplace-cleaning-services",
     price: "From 150 AED/visit",
     image: officeCleaning,
-    intro: "Maintain a pristine, hygienic, and productive working environment with Bronco's office cleaning solutions in Dubai.",
-    description: "From corporate towers in Business Bay and DIFC to boutique offices in Sheikh Zayed Road, Bronco Cleaning Services delivers customized corporate cleaning plans ensuring clean desks, disinfected conference rooms, and sanitized restrooms.",
+    intro: "Maintain a pristine, hygienic, and productive working environment with BCS's office cleaning solutions in Dubai.",
+    description: "From corporate towers in Business Bay and DIFC to boutique offices in Sheikh Zayed Road, BCS Cleaning Services delivers customized corporate cleaning plans ensuring clean desks, disinfected conference rooms, and sanitized restrooms.",
     benefits: [
       "Boost employee health and workplace productivity",
       "Flexible schedules (after-hours or weekend service)",
@@ -108,7 +108,7 @@ const services: Service[] = [
     price: "Custom Quote",
     image: warehouseCleaning,
     intro: "Heavy-duty industrial and warehouse cleaning services tailored for industrial parks across Dubai & Jebel Ali.",
-    description: "Keep industrial spaces compliant with UAE safety standards. Bronco offers specialized floor scrubbing, high-ceiling dust removal, machinery exterior wipedowns, and clutter clearing for logistics facilities and distribution hubs.",
+    description: "Keep industrial spaces compliant with UAE safety standards. BCS offers specialized floor scrubbing, high-ceiling dust removal, machinery exterior wipedowns, and clutter clearing for logistics facilities and distribution hubs.",
     benefits: [
       "Enhanced workplace safety and operational compliance",
       "High-power industrial floor scrubbers and pressure washers",
@@ -135,7 +135,7 @@ const services: Service[] = [
     price: "From 299 AED",
     image: movingCleaning,
     intro: "Ensure a smooth move with complete deep cleaning for empty properties in Dubai, ready for new tenants or owners.",
-    description: "Relocating in Dubai? Bronco Cleaning Services ensures your new villa or apartment is immaculate before you step in, or helps you secure your security deposit with a spotless handover cleaning.",
+    description: "Relocating in Dubai? BCS Cleaning Services ensures your new villa or apartment is immaculate before you step in, or helps you secure your security deposit with a spotless handover cleaning.",
     benefits: [
       "Complete deep clean of empty cupboards, wardrobes, and cabinets",
       "Thorough kitchen degreasing & appliance sanitization",
@@ -162,7 +162,7 @@ const services: Service[] = [
     price: "From 399 AED",
     image: afterBuilderCleaning,
     intro: "Specialized post-construction and renovation cleanup across Dubai homes, villas, and commercial premises.",
-    description: "Construction dust and plaster residue require professional extraction. Bronco removes fine paint splatters, cement stains, silicone leftover, and heavy dust from newly built or renovated properties in Dubai.",
+    description: "Construction dust and plaster residue require professional extraction. BCS removes fine paint splatters, cement stains, silicone leftover, and heavy dust from newly built or renovated properties in Dubai.",
     benefits: [
       "Elimination of hazardous fine drywall dust and silica residue",
       "Paint mark and mortar removal from glass, tiles, and floors",
@@ -189,7 +189,7 @@ const services: Service[] = [
     price: "From 120 AED/turnover",
     image: airbnbCleaning,
     intro: "Fast, high-standard turnover cleaning & linen refresh tailored for Dubai vacation rental and Airbnb hosts.",
-    description: "Maintain 5-star superhost ratings in Dubai Marina, Downtown Dubai, and Palm Jumeirah. Bronco provides rapid guest turnover cleaning, bed linen changes, restocking amenities, and inspection reporting.",
+    description: "Maintain 5-star superhost ratings in Dubai Marina, Downtown Dubai, and Palm Jumeirah. BCS provides rapid guest turnover cleaning, bed linen changes, restocking amenities, and inspection reporting.",
     benefits: [
       "Rapid turnaround between guest check-out and check-in times",
       "Fresh bed linen & towel arrangements",
@@ -216,11 +216,11 @@ const services: Service[] = [
     price: "From 35 AED/hr",
     image: hourlyCleaning,
     intro: "Flexible hourly cleaning options in Dubai. Pay only for the exact hours and tasks you require.",
-    description: "Need a quick 2-hour clean or half-day house chores? Bronco's hourly cleaning service gives you total freedom to select your priority cleaning tasks and duration.",
+    description: "Need a quick 2-hour clean or half-day house chores? BCS's hourly cleaning service gives you total freedom to select your priority cleaning tasks and duration.",
     benefits: [
       "Transparent hourly rate with no minimum long-term contracts",
       "Customer directs the cleaning priorities",
-      "Option to supply your own materials or use Bronco supplies",
+      "Option to supply your own materials or use BCS supplies",
       "Available on short notice across all major Dubai neighborhoods"
     ],
     whyChoose: [
@@ -268,7 +268,7 @@ const services: Service[] = [
     price: "From 799 AED/month",
     image: monthlyCleaning,
     intro: "Hassle-free monthly cleaning subscription plans for residences and commercial properties in Dubai.",
-    description: "Lock in lower rates and reliable scheduling with Bronco's monthly cleaning packages. Enjoy recurring scheduled cleans without re-booking every time.",
+    description: "Lock in lower rates and reliable scheduling with BCS's monthly cleaning packages. Enjoy recurring scheduled cleans without re-booking every time.",
     benefits: [
       "Significant cost savings compared to one-off bookings",
       "Fixed preferred time slots reserved for your convenience",
@@ -294,7 +294,7 @@ const services: Service[] = [
     price: "Custom Quote",
     image: eventCleaning,
     intro: "Pre-event preparation and post-event cleanup services for corporate galas, private parties, and exhibitions in Dubai.",
-    description: "Hosting a corporate conference, wedding, or VIP event in Dubai? Bronco's event cleaning crew manages venue setup cleaning, real-time trash collection, and complete post-event space restoration.",
+    description: "Hosting a corporate conference, wedding, or VIP event in Dubai? BCS's event cleaning crew manages venue setup cleaning, real-time trash collection, and complete post-event space restoration.",
     benefits: [
       "Pre-event floor polish & seating sanitization",
       "On-site janitorial crew during live events for rapid spill response",
@@ -320,7 +320,7 @@ const services: Service[] = [
     price: "Custom Quote",
     image: hospitalCleaning,
     intro: "Strict hospital-grade disinfection and healthcare facility sanitization compliant with Dubai Health Authority regulations.",
-    description: "Medical facilities demand clinical cleanliness. Bronco offers certified hospital cleaning in Dubai, targeting patient waiting rooms, doctor clinics, corridors, and operational facilities using DHA-approved disinfectants.",
+    description: "Medical facilities demand clinical cleanliness. BCS offers certified hospital cleaning in Dubai, targeting patient waiting rooms, doctor clinics, corridors, and operational facilities using DHA-approved disinfectants.",
     benefits: [
       "DHA-compliant medical-grade sanitization protocols",
       "Specialized pathogen and cross-contamination prevention",
@@ -346,7 +346,7 @@ const services: Service[] = [
     price: "Custom Quote",
     image: laboratoryCleaning,
     intro: "Precision decontamination and ultra-clean maintenance for research labs, testing centers, and cleanrooms in Dubai.",
-    description: "Laboratories require meticulous care to protect research integrity. Bronco provides specialized laboratory cleaning, bench surface decontamination, and particulate dust control across Dubai facilities.",
+    description: "Laboratories require meticulous care to protect research integrity. BCS provides specialized laboratory cleaning, bench surface decontamination, and particulate dust control across Dubai facilities.",
     benefits: [
       "Contamination-free surface sanitization protocols",
       "Non-corrosive, lab-safe disinfectant application",
@@ -372,7 +372,7 @@ const services: Service[] = [
     price: "From 199 AED",
     image: afterPartyCleaning,
     intro: "Fast morning-after party cleanup for private villas, apartments, and party halls in Dubai.",
-    description: "Enjoy your celebrations without worrying about the morning mess. Bronco's after party cleaning team arrives promptly to clear bottles, clean food stains, wash dishes, and restore your home to pristine order.",
+    description: "Enjoy your celebrations without worrying about the morning mess. BCS's after party cleaning team arrives promptly to clear bottles, clean food stains, wash dishes, and restore your home to pristine order.",
     benefits: [
       "Full kitchen cleanup and dishwashing included",
       "Stain removal from upholstery, rugs, and floors",
@@ -398,7 +398,7 @@ const services: Service[] = [
     price: "From 349 AED",
     image: deepCleaning,
     intro: "Intensive 360-degree deep cleaning solution for homes, villas, and offices throughout Dubai.",
-    description: "Over time, hidden dust, grease, and lime scale accumulate in hard-to-reach areas. Bronco's signature Deep Cleaning Service in Dubai covers every nook and cranny with specialized single-disc rotary scrubbers and steam generators.",
+    description: "Over time, hidden dust, grease, and lime scale accumulate in hard-to-reach areas. BCS's signature Deep Cleaning Service in Dubai covers every nook and cranny with specialized single-disc rotary scrubbers and steam generators.",
     benefits: [
       "Complete kitchen degreasing (hoods, ovens, backsplashes)",
       "High-pressure steam sanitization of bathrooms & grout",
@@ -425,7 +425,7 @@ const services: Service[] = [
     price: "From 450 AED",
     image: specializedDeepCleaning,
     intro: "Advanced target deep cleaning including steam disinfection, mold removal, and AC duct surface cleaning in Dubai.",
-    description: "For properties requiring specialized treatment, Bronco provides custom deep cleaning addressing stubborn mold, heavy limescale buildup, high-glass windows, and deep tile restoration.",
+    description: "For properties requiring specialized treatment, BCS provides custom deep cleaning addressing stubborn mold, heavy limescale buildup, high-glass windows, and deep tile restoration.",
     benefits: [
       "Anti-bacterial steam treatments destroying 99.9% of microbes",
       "Targeted mold remediation in humid bathroom & kitchen areas",
@@ -452,7 +452,7 @@ const services: Service[] = [
     price: "Custom Quote",
     image: gymCleaning,
     intro: "Sanitary cleaning and equipment disinfection solutions for fitness centers and residential gyms in Dubai.",
-    description: "Fitness facilities require non-stop hygiene. Bronco provides anti-microbial wiping of workout machinery, weights, rubber floor mats, locker rooms, and sauna facilities in Dubai.",
+    description: "Fitness facilities require non-stop hygiene. BCS provides anti-microbial wiping of workout machinery, weights, rubber floor mats, locker rooms, and sauna facilities in Dubai.",
     benefits: [
       "Elimination of sweat odors, bacteria, and fungal spores",
       "Equipment-safe non-corrosive disinfectant sprays",
@@ -478,7 +478,7 @@ const services: Service[] = [
     price: "From 250 AED",
     image: garageCleaning,
     intro: "High-pressure jet washing and oil stain removal for residential villa garages and commercial parking lots in Dubai.",
-    description: "Transform your grease-stained garage. Bronco utilizes heavy-duty pressure washers, degreasing agents, and industrial sweepers to clean garage floors, walls, and automatic shutters in Dubai.",
+    description: "Transform your grease-stained garage. BCS utilizes heavy-duty pressure washers, degreasing agents, and industrial sweepers to clean garage floors, walls, and automatic shutters in Dubai.",
     benefits: [
       "High-PSI water jet pressure washing for stubborn oil stains",
       "Removal of tire marks, grease buildup, and accumulated sand",
@@ -505,7 +505,7 @@ const services: Service[] = [
     price: "From 35 AED/hr",
     image: maidServices,
     intro: "Professional, trustworthy, and vetted full-time or part-time maid services in Dubai.",
-    description: "Need reliable daily help with ironing, laundry, dishwashing, and general home tidying? Bronco provides carefully vetted, trained, and polite female maids for Dubai residences.",
+    description: "Need reliable daily help with ironing, laundry, dishwashing, and general home tidying? BCS provides carefully vetted, trained, and polite female maids for Dubai residences.",
     benefits: [
       "Vetted, background-verified, and insured maid staff",
       "Flexible part-time hourly or recurring full-time options",
@@ -531,7 +531,7 @@ const services: Service[] = [
     price: "From 299 AED",
     image: outdoorCleaning,
     intro: "Patio, terrace, courtyard, and outdoor villa area pressure washing and dust removal across Dubai.",
-    description: "Dubai's climate leads to rapid dust and sand accumulation on outdoor patio tiles, swimming pool decks, pergolas, and garden furniture. Bronco restores your outdoor spaces to pristine comfort.",
+    description: "Dubai's climate leads to rapid dust and sand accumulation on outdoor patio tiles, swimming pool decks, pergolas, and garden furniture. BCS restores your outdoor spaces to pristine comfort.",
     benefits: [
       "Pressure jet wash for patio tiles, interlock pavers, and stone paths",
       "Outdoor furniture cushion dusting & surface washing",
@@ -557,7 +557,7 @@ const services: Service[] = [
     price: "From 149 AED",
     image: sofaCleaning,
     intro: "Deep upholstery steam cleaning, stain removal, and sanitization for sofas, armchairs, and dining chairs in Dubai.",
-    description: "Revitalize your furniture! Bronco uses professional fabric steam extractors, shampoo scrubbers, and leather conditioners to eliminate deep stains, dust mites, odors, and allergens from your sofas.",
+    description: "Revitalize your furniture! BCS uses professional fabric steam extractors, shampoo scrubbers, and leather conditioners to eliminate deep stains, dust mites, odors, and allergens from your sofas.",
     benefits: [
       "Injection-extraction steam cleaning reaching deep fabric layers",
       "Tough stain removal (coffee, food, pet stains, ink)",
@@ -584,7 +584,7 @@ const services: Service[] = [
     price: "Custom Quote",
     image: aviationWarehouseCleaning,
     intro: "Specialized cleaning for aircraft-parts warehouses, storage facilities, and aviation logistics units across Dubai.",
-    description: "Aviation warehouses call for a higher standard of housekeeping to protect sensitive aircraft components, meet safety compliance, and keep operations running without disruption. Bronco Cleaning Services provides dedicated aviation warehouse cleaning covering storage floors, racking systems, workshops, and loading areas across Dubai's aviation and logistics hubs.",
+    description: "Aviation warehouses call for a higher standard of housekeeping to protect sensitive aircraft components, meet safety compliance, and keep operations running without disruption. BCS Cleaning Services provides dedicated aviation warehouse cleaning covering storage floors, racking systems, workshops, and loading areas across Dubai's aviation and logistics hubs.",
     benefits: [
       "Aircraft-parts warehouse floor cleaning",
       "Racking and shelving cleaning",

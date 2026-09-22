@@ -79,7 +79,7 @@ const BlogSingle: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
                   ))
                 ) : (
                   <p>
-                    Bronco Cleaning Services provides tailored residential, commercial, and deep cleaning solutions across all Dubai communities. Our trained cleaning specialists operate with strict adherence to Dubai Municipality hygiene guidelines.
+                    BCS Cleaning Services provides tailored residential, commercial, and deep cleaning solutions across all Dubai communities. Our trained cleaning specialists operate with strict adherence to Dubai Municipality hygiene guidelines.
                   </p>
                 )}
 
@@ -91,14 +91,14 @@ const BlogSingle: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
             {/* QUOTE */}
             <blockquote>
               "Cleanliness and hygiene inspire healthy homes and productive businesses across Dubai."
-              <span>Bronco Cleaning Services Dubai</span>
+              <span>BCS Cleaning Services Dubai</span>
             </blockquote>
 
 
             {/* EXTRA CONTENT */}
             <div className="post-team-content">
 
-              <h3>Why Dubai Trusts Bronco Cleaning Services</h3>
+              <h3>Why Dubai Trusts BCS Cleaning Services</h3>
 
               <div className="row align-items-center">
 
@@ -138,7 +138,7 @@ const BlogSingle: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
 
 
             <p>
-              Whether you require deep cleaning for your villa in Palm Jumeirah or daily commercial maintenance in Business Bay, Bronco Cleaning Services is your trusted cleaning partner in Dubai.
+              Whether you require deep cleaning for your villa in Palm Jumeirah or daily commercial maintenance in Business Bay, BCS Cleaning Services is your trusted cleaning partner in Dubai.
             </p>
 
 
@@ -158,7 +158,7 @@ const BlogSingle: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
                       <ul>
                         <li><Link to="#">Dubai Cleaning</Link></li>
                         <li><Link to="#">Deep Clean</Link></li>
-                        <li><Link to="#">Bronco</Link></li>
+                        <li><Link to="#">BCS</Link></li>
                       </ul>
 
                     </div>

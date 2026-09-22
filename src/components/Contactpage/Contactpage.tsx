@@ -48,7 +48,9 @@ const Contactpage: React.FC = () => {
                   <div className="office-info-text">
                     <h2>Phone & WhatsApp</h2>
                     <p>
-                      +971 054 148 4800
+                      <a href="tel:+9710541484800" style={{ color: "#7C9473", fontWeight: "600", textDecoration: "none" }}>
+                        +971 054 148 4800
+                      </a>
                     </p>
                     <a
                       href="https://wa.me/971541484800"
@@ -73,8 +75,21 @@ const Contactpage: React.FC = () => {
                   <div className="office-info-text">
                     <h2>Email Addresses</h2>
                     <p>
-                      info@broncocleaning.ae <br />
-                      contact@broncocleaning.ae
+                      <a
+                        href="mailto:info@broncocleaning.ae"
+                        className="email-link"
+                        style={{ color: "#7C9473", fontWeight: "600", textDecoration: "underline" }}
+                      >
+                        info@broncocleaning.ae
+                      </a>
+                      <br />
+                      <a
+                        href="mailto:contact@broncocleaning.ae"
+                        className="email-link"
+                        style={{ color: "#7C9473", fontWeight: "600", textDecoration: "underline" }}
+                      >
+                        contact@broncocleaning.ae
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -91,7 +106,7 @@ const Contactpage: React.FC = () => {
                   Service Locations – Dubai
                 </h3>
                 <p className="text-center text-muted mb-4" style={{ fontSize: "14px" }}>
-                  Bronco Cleaning Services provides reliable, high-quality home, office, and deep cleaning solutions across all major Dubai communities:
+                  BCS Cleaning Services provides reliable, high-quality home, office, and deep cleaning solutions across all major Dubai communities:
                 </p>
                 <div className="row g-2 justify-content-center text-center">
                   {dubailandAreas.map((area, index) => (
@@ -117,7 +132,7 @@ const Contactpage: React.FC = () => {
                   <h2>Need Professional Cleaning Services in Dubai? Contact Bronco Today!</h2>
 
                   <p>
-                    Positioning Bronco as your trusted cleaning partner in Dubai. Contact our team to book your service or request a customized cleaning quote.
+                    Positioning BCS as your trusted cleaning partner in Dubai. Contact our team to book your service or request a customized cleaning quote.
                   </p>
 
                   <div className="map">

@@ -69,7 +69,7 @@ const blogs: BlogItem[] = [
     content: [
       "First impressions matter immensely in Dubai's competitive business ecosystem. Walking into a gleaming, spotless office instills immediate confidence in visiting partners and clients.",
       "Keyboards, door handles, and shared pantry spaces are hotspots for germs. Regular professional office sanitization drastically reduces employee sick days during seasonal flu cycles.",
-      "Outsourcing your workplace hygiene to Bronco Cleaning Services ensures flexible after-hours cleaning tailored to your company's operational schedule."
+      "Outsourcing your workplace hygiene to BCS Cleaning Services ensures flexible after-hours cleaning tailored to your company's operational schedule."
     ]
   },
   {
@@ -86,7 +86,7 @@ const blogs: BlogItem[] = [
     content: [
       "Moving homes in Dubai can be overwhelming. A detailed move-out cleaning checklist ensures landlord inspections pass without deposit deductions.",
       "Key checklist items include deep cleaning inside kitchen cabinets, degreasing oven hoods, descaling bathroom tiles, polishing window glass, and removing paint/wall scuffs.",
-      "Hiring Bronco's specialized move-in/move-out team guarantees your new home is disinfected and sparkling clean before your furniture arrives."
+      "Hiring BCS's specialized move-in/move-out team guarantees your new home is disinfected and sparkling clean before your furniture arrives."
     ]
   }
 ];

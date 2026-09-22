@@ -57,11 +57,11 @@ const ChooseSection: React.FC = () => {
                       <i>
                         <img src={cleaningIcon} alt="icon" />
                       </i>
-                      why choose Bronco
+                      why choose BCS
                     </span>
 
                     <h2 className="poort-text poort-in-right">
-                      Your Space Deserves the Best – Why Dubai Trusts Bronco
+                      Your Space Deserves the Best – Why Dubai Trusts BCS
                     </h2>
 
                     <p>

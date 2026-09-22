@@ -96,7 +96,7 @@ const ServiceSinglePage: React.FC = () => {
                 {ServiceDetails.whyChoose && ServiceDetails.whyChoose.length > 0 && (
                   <div className="my-4">
                     <h3 className="h4 mb-3" style={{ color: "#22302A", fontWeight: "700" }}>
-                      Why Choose Bronco Cleaning Services?
+                      Why Choose BCS Cleaning Services?
                     </h3>
                     <div className="row g-3">
                       {ServiceDetails.whyChoose.map((point, idx) => (
@@ -132,7 +132,7 @@ const ServiceSinglePage: React.FC = () => {
                           {activeIndex === index && (
                             <div className="accordion-content">
                               <p>
-                                Bronco's trained cleaning crew executes this step with full attention to detail and high-grade eco-friendly cleaning solutions.
+                                BCS's trained cleaning crew executes this step with full attention to detail and high-grade eco-friendly cleaning solutions.
                               </p>
                             </div>
                           )}
@@ -224,7 +224,7 @@ const ServiceSinglePage: React.FC = () => {
                   </div>
 
                   <h2>
-                    Need Bronco Cleaning in Dubai?
+                    Need BCS Cleaning in Dubai?
                   </h2>
 
                   <span>Call anytime 24/7</span>
