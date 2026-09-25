@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import blogs from "../../api/blogs";
 
-import logoImg from "../../images/blog/bronco-icon.png";
+import logoImg from "../../images/logo/broncologo.png";
 
 const BlogSidebar: React.FC = () => {
 
@@ -18,15 +18,15 @@ const BlogSidebar: React.FC = () => {
       <div className="widget about-widget">
 
         <div className="img-holder">
-          <img src={logoImg} alt="about Bronco" />
+          <img src={logoImg} alt="Bronco Cleaning Services Dubai" style={{ maxWidth: "240px", maxHeight: "110px", width: "auto", height: "auto", margin: "0 auto", display: "block", objectFit: "contain" }} />
         </div>
 
-        <h4>BCS Cleaning Experts</h4>
+        <h4>Bronco Cleaning Experts</h4>
 
         <span>Dubai Cleaning & Hygiene Insights</span>
 
         <p>
-          Positioning BCS as Dubai's most reliable and professional cleaning company for homes, offices, and industrial facilities.
+          Positioning Bronco Cleaning Services as Dubai's most reliable and professional cleaning company for homes, offices, and industrial facilities.
         </p>
 
         <ul>

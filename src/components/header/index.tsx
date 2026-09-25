@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 import callIcon from "../../images/call.svg";
+import logo from "../../images/logo/broncologo.png";
 
 interface SubMenuItem {
   label: string;
@@ -88,18 +89,16 @@ const Header: React.FC = () => {
               </div>
 
               {/* Logo */}
-              <div className="col-xl-3 col-lg-2 col-md-6 col-6">
+              <div className="col-xl-3 col-lg-3 col-md-6 col-6">
                 <div className="navbar-header">
                   <Link className="navbar-brand d-flex align-items-center" to="/">
-                    <span style={{ fontSize: "24px", fontWeight: "800", color: "#22302A", letterSpacing: "0.5px" }}>
-                      BRONCO <span style={{ color: "#7C9473" }}>CLEANING</span>
-                    </span>
+                    <img src={logo} alt="Bronco Cleaning Services Dubai" style={{ maxHeight: "78px", maxWidth: "240px", width: "auto", height: "auto", objectFit: "contain" }} />
                   </Link>
                 </div>
               </div>
 
               {/* Navigation */}
-              <div className="col-xl-6 col-lg-8 col-md-1 col-1">
+              <div className="col-xl-6 col-lg-6 col-md-1 col-1">
                 <div
                   id="navbar"
                   className="collapse navbar-collapse navigation-holder"

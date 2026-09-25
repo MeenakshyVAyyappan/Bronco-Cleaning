@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import footerShape from "../../images/footer-shape.png";
+import logo from "../../images/logo/broncologo.png";
 
 const Footer: React.FC = () => {
   const quickLinks = [
@@ -38,13 +39,11 @@ const Footer: React.FC = () => {
 
             {/* Logo */}
             <div className="item widget-about">
-              <Link className="navbar-brand d-flex align-items-center mb-4" to="/" style={{ textDecoration: 'none' }}>
-                <span style={{ fontSize: "28px", fontWeight: "800", color: "#22302A", letterSpacing: "0.5px" }}>
-                  BCS <span style={{ color: "#7C9473" }}>CLEANING</span>
-                </span>
+              <Link className="navbar-brand d-flex align-items-center mb-4" to="/" style={{ textDecoration: 'none' }} onClick={ClickHandler}>
+                <img src={logo} alt="Bronco Cleaning Services Dubai" style={{ maxHeight: "115px", maxWidth: "300px", width: "auto", height: "auto", objectFit: "contain" }} />
               </Link>
               <p style={{ color: "#4A5852", lineHeight: "1.6", maxWidth: "400px" }}>
-                BCS Cleaning Services provides reliable, high-quality home, office, and deep cleaning solutions across all major Dubai communities.
+                Bronco Cleaning Services provides reliable, high-quality home, office, and deep cleaning solutions across all major Dubai communities.
               </p>
             </div>
             <div className="item">
@@ -94,7 +93,7 @@ const Footer: React.FC = () => {
 
                 <div className="col-lg-5 col-12">
                   <p className="copyright">
-                    Copyright &copy; <span>2026</span> BCS Cleaning Services Dubai. All rights reserved.
+                    Copyright &copy; <span>2026</span> Bronco Cleaning Services Dubai. All rights reserved.
                   </p>
                 </div>
 

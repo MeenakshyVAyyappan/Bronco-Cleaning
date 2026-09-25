@@ -3,6 +3,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Collapse from "@mui/material/Collapse";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../images/logo/broncologo.png";
 import "./style.css";
 
 interface SubMenuItem {
@@ -83,7 +84,10 @@ const MobileMenu: React.FC = () => {
   return (
     <div>
       <div className={`mobileMenu ${menuActive ? "show" : ""}`}>
-        <div className="menu-close">
+        <div className="menu-close d-flex align-items-center justify-content-between px-3 pt-3">
+          <Link to="/" onClick={ClickHandler}>
+            <img src={logo} alt="Bronco Cleaning" style={{ maxHeight: "65px", maxWidth: "180px", backgroundColor: "#fff", padding: "6px 12px", borderRadius: "8px", objectFit: "contain" }} />
+          </Link>
           <div className="clox" onClick={() => setMenuState(false)}>
             <i className="ti-close"></i>
           </div>
