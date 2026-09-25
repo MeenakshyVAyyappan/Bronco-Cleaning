@@ -18,7 +18,7 @@ const BlogSidebar: React.FC = () => {
       <div className="widget about-widget">
 
         <div className="img-holder">
-          <img src={logoImg} alt="Bronco Cleaning Services Dubai" style={{ maxWidth: "240px", maxHeight: "110px", width: "auto", height: "auto", margin: "0 auto", display: "block", objectFit: "contain" }} />
+          <img src={logoImg} alt="Bronco Cleaning Services Dubai" />
         </div>
 
         <h4>Bronco Cleaning Experts</h4>

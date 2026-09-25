@@ -38,7 +38,7 @@
             width: 100%;
             height: 100%;
             content: "";
-            background: linear-gradient(110deg, #DCE8D9 -0.4%, #CFE0D6 63.6%);
+            background: linear-gradient(110deg, #F1F7EC -0.4%, #E2EED9 63.6%);
             opacity: 0.46;
             z-index: -1;
         }
@@ -127,7 +127,7 @@
     }
 
     .title {
-        color: #212F28;
+        color: $heading-color;
         font-size: 22px;
         font-style: normal;
         font-weight: 500;
@@ -421,7 +421,8 @@
             a {
                 width: 150px;
                 height: 150px;
-                background: #8CA696;
+                background: $theme-primary-color;
+                color: #fff;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -499,7 +500,7 @@
         }
 
         ul li {
-            color: #212F28;
+            color: $heading-color;
             font-size: 16px;
             font-weight: 500;
         }
@@ -517,7 +518,7 @@
         }
 
         p {
-            color: #212F28;
+            color: $heading-color;
             font-size: 18px;
             font-weight: 500;
             margin: 0;
@@ -535,7 +536,7 @@
 
         .copyright {
             span {
-                color: #6E958A;
+                color: $theme-primary-color;
             }
         }
     }

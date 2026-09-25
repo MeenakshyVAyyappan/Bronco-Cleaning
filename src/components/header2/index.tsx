@@ -123,9 +123,9 @@ const HeaderTwo: React.FC = () => {
                       const active = isPathActive(item.path, item.children);
                       const activeLinkStyle: React.CSSProperties = active
                         ? {
-                            color: "#7C9473",
+                            color: "#43903E",
                             fontWeight: 700,
-                            borderBottom: "3px solid #7C9473",
+                            borderBottom: "3px solid #43903E",
                             paddingBottom: "4px",
                           }
                         : {};
@@ -166,9 +166,9 @@ const HeaderTwo: React.FC = () => {
 
                                 const subActiveStyle: React.CSSProperties = subActive
                                   ? {
-                                      color: "#7C9473",
+                                      color: "#43903E",
                                       fontWeight: 700,
-                                      backgroundColor: "rgba(124, 148, 115, 0.12)",
+                                      backgroundColor: "rgba(67, 144, 62, 0.12)",
                                     }
                                   : {};
 

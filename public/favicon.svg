@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="128" fill="#ffffff"/>
+  <rect width="480" height="480" x="16" y="16" rx="112" fill="none" stroke="#F1F7EC" stroke-width="8"/>
+  <g transform="translate(56, 56) scale(0.78125)">
+    <!-- Leaf / C Emblem for BCS -->
+    <path d="M 256,64 C 180,64 120,124 120,200 C 120,250 145,290 185,315 C 160,335 130,345 96,345 C 80,345 65,342 50,338 C 75,390 125,426 185,432 C 195,433 206,434 216,434 C 310,434 386,358 386,264 C 386,160 330,64 256,64 Z" fill="#43903E"/>
+    <!-- Leaf Accent Layer -->
+    <path d="M 170,140 C 230,120 300,160 320,220 C 280,250 210,240 170,140 Z" fill="#A1CD38"/>
+    <!-- Grey C Accent -->
+    <path d="M 256,120 C 335,120 400,185 400,264 C 400,343 335,408 256,408 C 220,408 187,395 161,373 C 188,377 217,375 244,365 C 298,345 334,293 334,236 C 334,180 298,133 256,120 Z" fill="#838184"/>
+    <!-- Sparkles -->
+    <circle cx="340" cy="140" r="16" fill="#A1CD38"/>
+    <circle cx="380" cy="110" r="10" fill="#43903E"/>
+  </g>
+</svg>

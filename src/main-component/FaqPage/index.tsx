@@ -3,7 +3,6 @@ import Navbar2 from "../../components/Navbar2/Navbar2";
 import PageTitle from '../../components/pagetitle/PageTitle'
 import FaqSection from '../../components/FaqSection/FaqSection';
 import ContactSection from '../../components/ContactSection/ContactSection';
-import PartnersSection from '../../components/PartnersSection/PartnersSection';
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import Footer from '../../components/footer/Footer';
 
@@ -17,7 +16,6 @@ const FaqPage: React.FC = () => {
                 <FaqSection />
             </div>
             <ContactSection />
-            <PartnersSection />
             <Footer/>
             <Scrollbar/>
         </Fragment>

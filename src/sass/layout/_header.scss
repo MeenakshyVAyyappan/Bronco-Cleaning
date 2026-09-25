@@ -1302,7 +1302,7 @@
 		}
 
 		#navbar {
-			background: #4F7267;
+			background: $theme-primary-color;
 			display: block !important;
 			width: 300px;
 			height: 100%;
@@ -1657,7 +1657,7 @@
 
 		.icon {
 			border-radius: 58px;
-			background: #6E958A;
+			background: $theme-primary-color-s2;
 			width: 40px;
 			height: 40px;
 			line-height: 40px;

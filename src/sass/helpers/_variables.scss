@@ -11,21 +11,21 @@ $heading-font: "Parkinsans";
 
 
 // color
-// Sage Green (primary) & Muted Eucalyptus (secondary) theme
-$dark-gray: #22302A; //
-$body-color: #2E3D35;
+// Bronco Cleaning Solutions Brand Palette (Primary Dark Green #43903E, Leaf Accent #A1CD38, Olive #84A03A, Brand Grey #838184)
+$dark-gray: #1E2B21; // Dark charcoal green
+$body-color: #4A4A4C; // Dark grey body text
 $white: #fff; //
-$light: #838F84;
+$light: #838184; // Brand grey
 $black: #000; //
-$small-black: #F1F4EF; //
-$cyan: #4F7267; //
+$small-black: #F1F7EC; // Light green background accent
+$cyan: #43903E; // Primary dark green
 
-$theme-primary-color: #7C9473; // Sage Green
-$theme-primary-color-s2: #6E958A; // Muted Eucalyptus
+$theme-primary-color: #43903E; // Primary Dark Green
+$theme-primary-color-s2: #84A03A; // Olive Green Secondary Accent
 $body-bg-color: #fff; //
-$section-bg-color: #F2F5EF; //
-$text-color: #64726A; //
-$text-light-color: #78827B;
-$heading-color: $dark-gray; //
-$border-color: #DCE3D8; //
-$border-color-s2: #D6DED2; //
+$section-bg-color: #F1F7EC; // Light Green Section BG
+$text-color: #4A4A4C; // Body text
+$text-light-color: #838184; // Brand grey text
+$heading-color: $dark-gray; // Dark charcoal green
+$border-color: #DDE7D6; // Border light green
+$border-color-s2: #DDE7D6; // Border light green

@@ -452,14 +452,14 @@
 .wpo-project-details-text {
     text-align: center;
     padding: 40px;
-    background: #7C9473;
+    background: $theme-primary-color;
 
 }
 
 .wpo-project-details-text-3 {
     text-align: center;
     padding: 40px;
-    background: #5C7A55;
+    background: #37782F;
 }
 
 .wpo-project-details-list {
@@ -632,7 +632,7 @@
 
     .wpo-project-details-list {
         padding-bottom: 10px;
-        background: #7C9473;
+        background: $theme-primary-color;
     }
 }
 

@@ -102,13 +102,13 @@
 				transition: all .3s ease-in-out;
 
 				a {
-					color: #7C9473 !important;
+					color: $theme-primary-color !important;
 					font-weight: 600;
 					text-decoration: underline !important;
 					transition: all .3s ease-in-out;
 
 					&:hover {
-						color: #586e51 !important;
+						color: #37782F !important;
 					}
 				}
 			}

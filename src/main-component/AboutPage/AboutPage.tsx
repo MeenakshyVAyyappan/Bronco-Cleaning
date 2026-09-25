@@ -11,7 +11,6 @@ import TransformingSection from '../../components/TransformingSection/Transformi
 import FaqSection from '../../components/FaqSection/FaqSection';
 import TestimonialSection from '../../components/Testimonial/TestimonialSection';
 import ContactSection from '../../components/ContactSection/ContactSection';
-import PartnersSection from '../../components/PartnersSection/PartnersSection';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Footer from '../../components/footer/Footer';
 
@@ -30,7 +29,6 @@ const AboutPage: React.FC = () => {
             <FaqSection />
             <TestimonialSection />
             <ContactSection />
-            <PartnersSection />
             <Footer />
             <Scrollbar />
         </Fragment>

@@ -48,7 +48,7 @@ const Contactpage: React.FC = () => {
                   <div className="office-info-text">
                     <h2>Phone & WhatsApp</h2>
                     <p>
-                      <a href="tel:+9710541484800" style={{ color: "#7C9473", fontWeight: "600", textDecoration: "none" }}>
+                      <a href="tel:+9710541484800" style={{ color: "#43903E", fontWeight: "600", textDecoration: "none" }}>
                         +971 054 148 4800
                       </a>
                     </p>
@@ -78,7 +78,17 @@ const Contactpage: React.FC = () => {
                       <a
                         href="mailto:info@broncocleaning.ae"
                         className="email-link"
-                        style={{ color: "#7C9473", fontWeight: "600", textDecoration: "underline" }}
+                        style={{
+                          color: "#43903E",
+                          fontWeight: "600",
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                          position: "relative",
+                          zIndex: 5
+                        }}
+                        onClick={() => {
+                          window.location.href = "mailto:info@broncocleaning.ae";
+                        }}
                       >
                         info@broncocleaning.ae
                       </a>
@@ -86,7 +96,17 @@ const Contactpage: React.FC = () => {
                       <a
                         href="mailto:contact@broncocleaning.ae"
                         className="email-link"
-                        style={{ color: "#7C9473", fontWeight: "600", textDecoration: "underline" }}
+                        style={{
+                          color: "#43903E",
+                          fontWeight: "600",
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                          position: "relative",
+                          zIndex: 5
+                        }}
+                        onClick={() => {
+                          window.location.href = "mailto:contact@broncocleaning.ae";
+                        }}
                       >
                         contact@broncocleaning.ae
                       </a>
@@ -101,8 +121,8 @@ const Contactpage: React.FC = () => {
           {/* Service Locations list section */}
           <div className="row my-5">
             <div className="col-12">
-              <div className="p-4 rounded" style={{ background: "#F2F5EF" }}>
-                <h3 className="h4 text-center mb-3" style={{ color: "#22302A", fontWeight: "700" }}>
+              <div className="p-4 rounded" style={{ background: "#F1F7EC" }}>
+                <h3 className="h4 text-center mb-3" style={{ color: "#1E2B21", fontWeight: "700" }}>
                   Service Locations – Dubai
                 </h3>
                 <p className="text-center text-muted mb-4" style={{ fontSize: "14px" }}>

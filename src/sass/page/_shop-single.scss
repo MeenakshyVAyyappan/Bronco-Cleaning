@@ -114,7 +114,7 @@
 			.rating{
 				margin-right: 10px;
 				i{
-					color: #6E958A;
+					color: $theme-primary-color-s2;
 				}
 			}
 		}
@@ -533,12 +533,12 @@
 			  
 			  .give-rating:not(:hover) label input:checked ~ .icon,
 			  .give-rating:hover label:hover input ~ .icon {
-				color: #6E958A;
+				color: $theme-primary-color-s2;
 			  }
 			  
 			  .give-rating label input:focus:not(:checked) ~ .icon:last-child {
 				color: #ddd;
-				text-shadow: 0 0 5px #6E958A;
+				text-shadow: 0 0 5px $theme-primary-color-s2;
 			  }
 
 			form {

@@ -5,14 +5,14 @@
     z-index: 9999;
     height: 100vh;
     width: 300px;
-    background: #4F7267;
+    background: #43903E;
     transition: all 0.3s ease 0s;
     box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
     overflow-x: auto;
     overflow-y: scroll;
 }
 .responsivemenu .card-body{
-    background: #4F7267;
+    background: #43903E;
 }
 .mobileMenu h2{
     padding-left: 20px;
@@ -169,8 +169,8 @@
 .responsivemenu li a.active,
 .responsivemenu li p.active,
 .responsivemenu ul.subMenu li a.active {
-    color: #7C9473 !important;
+    color: #A1CD38 !important;
     font-weight: 700 !important;
-    background-color: rgba(124, 148, 115, 0.15) !important;
-    border-left: 4px solid #7C9473 !important;
+    background-color: rgba(161, 205, 56, 0.2) !important;
+    border-left: 4px solid #A1CD38 !important;
 }
