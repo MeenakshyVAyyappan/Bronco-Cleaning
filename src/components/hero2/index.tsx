@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
+import { scrollToTop } from "../ScrollToTop";
 
 import HeroImg from "../../images/slider/hero-img.png";
 import Sparkle from "../../images/slider/sparkle-light.svg";
 
 const HeroTwo: React.FC = () => {
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   return (

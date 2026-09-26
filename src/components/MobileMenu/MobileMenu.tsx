@@ -4,6 +4,7 @@ import ListItem from "@mui/material/ListItem";
 import Collapse from "@mui/material/Collapse";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/logo/broncologo.png";
+import { scrollToTop } from "../ScrollToTop";
 import "./style.css";
 
 interface SubMenuItem {
@@ -70,7 +71,7 @@ const MobileMenu: React.FC = () => {
   const location = useLocation();
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
     setMenuState(false);
   };
 

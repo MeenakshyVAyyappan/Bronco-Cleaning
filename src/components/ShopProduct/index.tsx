@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../ScrollToTop";
 
 interface Product {
   id?: number;
@@ -20,7 +21,7 @@ interface ShopProductProps {
 const ShopProduct: React.FC<ShopProductProps> = ({ products, addToCartProduct }) => {
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   return (
@@ -37,7 +38,9 @@ const ShopProduct: React.FC<ShopProductProps> = ({ products, addToCartProduct })
                 <div className="grid fade_bottom" key={index}>
 
                   <div className="img-holder">
-                    <img src={product.proImg} alt={product.title} />
+                    <Link onClick={ClickHandler} to={`/product-single/${product.slug}`}>
+                      <img src={product.proImg} alt={product.title} />
+                    </Link>
                   </div>
 
                   <div className="details">
@@ -78,26 +81,20 @@ const ShopProduct: React.FC<ShopProductProps> = ({ products, addToCartProduct })
 
               <ul className="pg-pagination">
 
-                <li>
-                  <Link to="#" aria-label="Previous" className="d-none">
-                    <i className="fi ti-angle-left"></i>
-                  </Link>
-                </li>
-
                 <li className="active">
-                  <Link to="#">1</Link>
+                  <Link onClick={ClickHandler} to="/shop">1</Link>
                 </li>
 
                 <li>
-                  <Link to="#">2</Link>
+                  <Link onClick={ClickHandler} to="/shop">2</Link>
                 </li>
 
                 <li>
-                  <Link to="#">3</Link>
+                  <Link onClick={ClickHandler} to="/shop">3</Link>
                 </li>
 
                 <li>
-                  <Link to="#" aria-label="Next">
+                  <Link onClick={ClickHandler} to="/shop" aria-label="Next">
                     <i className="fi ti-arrow-right"></i>
                   </Link>
                 </li>

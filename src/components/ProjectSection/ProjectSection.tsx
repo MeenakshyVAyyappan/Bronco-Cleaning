@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
+import { scrollToTop } from "../ScrollToTop";
 
 import projects from "../../api/projects";
 
 const ProjectSection: React.FC = () => {
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   return (
@@ -29,7 +30,9 @@ const ProjectSection: React.FC = () => {
                     <div className="wpo-project-item">
 
                       <div className="wpo-project-img middle-light">
-                        <img src={project.image} alt={project.title} />
+                        <Link onClick={ClickHandler} to={`/project-single/${project.slug}`}>
+                          <img src={project.image} alt={project.title} />
+                        </Link>
                       </div>
 
                       <div className="wpo-project-text">

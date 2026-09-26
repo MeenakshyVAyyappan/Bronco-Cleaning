@@ -5,6 +5,7 @@ import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
 import services from "../../api/services";
 import ServiceCard from "../ServiceCard";
+import { scrollToTop } from "../ScrollToTop";
 
 import Shape1 from "../../images/service/shape1.svg";
 import Shape3 from "../../images/service/shape3.svg";
@@ -20,7 +21,7 @@ const ServiceSectionThree: React.FC = () => {
   );
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   const ref = useRef<HTMLDivElement | null>(null);

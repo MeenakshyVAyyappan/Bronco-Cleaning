@@ -1,13 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import blogs from "../../api/blogs";
+import { scrollToTop } from "../ScrollToTop";
 
 import logoImg from "../../images/logo/broncologo.png";
 
 const BlogSidebar: React.FC = () => {
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
+  };
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (search.trim()) {
+      navigate(`/blog`);
+      scrollToTop();
+    }
   };
 
   return (
@@ -18,7 +29,9 @@ const BlogSidebar: React.FC = () => {
       <div className="widget about-widget">
 
         <div className="img-holder">
-          <img src={logoImg} alt="Bronco Cleaning Services Dubai" />
+          <Link to="/" onClick={ClickHandler}>
+            <img src={logoImg} alt="Bronco Cleaning Services Dubai" />
+          </Link>
         </div>
 
         <h4>Bronco Cleaning Experts</h4>
@@ -30,10 +43,10 @@ const BlogSidebar: React.FC = () => {
         </p>
 
         <ul>
-          <li><Link to="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
-          <li><Link to="#"><i className="flaticon-linkedin"></i></Link></li>
-          <li><Link to="#"><i className="ti-pinterest"></i></Link></li>
-          <li><Link to="#"><i className="flaticon-twitter"></i></Link></li>
+          <li><a href="https://facebook.com/broncocleaning" target="_blank" rel="noopener noreferrer"><i className="flaticon-facebook-app-symbol"></i></a></li>
+          <li><a href="https://linkedin.com/company/broncocleaning" target="_blank" rel="noopener noreferrer"><i className="flaticon-linkedin"></i></a></li>
+          <li><a href="https://instagram.com/broncocleaning" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
+          <li><a href="https://wa.me/971541484800" target="_blank" rel="noopener noreferrer"><i className="fa fa-whatsapp"></i></a></li>
         </ul>
 
       </div>
@@ -44,12 +57,14 @@ const BlogSidebar: React.FC = () => {
 
         <h3>Search Dubai Cleaning Blog</h3>
 
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form onSubmit={handleSearchSubmit}>
           <div>
             <input
               type="text"
               className="form-control"
               placeholder="Search Dubai cleaning tips..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
             />
 
             <button type="submit">
@@ -73,7 +88,9 @@ const BlogSidebar: React.FC = () => {
             <div className="post" key={blog.id}>
 
               <div className="img-holder">
-                <img src={blog.image} alt={blog.title} />
+                <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>
+                  <img src={blog.image} alt={blog.title} />
+                </Link>
               </div>
 
               <div className="details">
@@ -108,14 +125,14 @@ const BlogSidebar: React.FC = () => {
         <h3>Popular Tags</h3>
 
         <ul>
-          <li><Link to="#">Dubai Cleaning</Link></li>
-          <li><Link to="#">Deep Clean</Link></li>
-          <li><Link to="#">Office Sanitization</Link></li>
-          <li><Link to="#">Airbnb Turnover</Link></li>
-          <li><Link to="#">Villa Maid</Link></li>
-          <li><Link to="#">Move-In Dubai</Link></li>
-          <li><Link to="#">Sofa Clean</Link></li>
-          <li><Link to="#">Warehouse</Link></li>
+          <li><Link onClick={ClickHandler} to="/service">Dubai Cleaning</Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/deep-cleaning-services-dubai">Deep Clean</Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/office-workplace-cleaning-services">Office Sanitization</Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/airbnb-cleaning-services">Airbnb Turnover</Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/maid-services">Villa Maid</Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/moving-in-moving-out-cleaning-services">Move-In Dubai</Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/sofa-cleaning-services">Sofa Clean</Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/warehouse-cleaning-services">Warehouse</Link></li>
         </ul>
 
       </div>
@@ -127,11 +144,11 @@ const BlogSidebar: React.FC = () => {
         <h3>Dubai Cleaning Categories</h3>
 
         <ul>
-          <li><Link to="#">Deep Cleaning Dubai <span>18</span></Link></li>
-          <li><Link to="#">Residential Cleaning <span>25</span></Link></li>
-          <li><Link to="#">Commercial & Office <span>34</span></Link></li>
-          <li><Link to="#">Airbnb Hospitality <span>12</span></Link></li>
-          <li><Link to="#">Warehouse & Industrial <span>15</span></Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/deep-cleaning-services-dubai">Deep Cleaning Dubai <span>18</span></Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/home-cleaning-services">Residential Cleaning <span>25</span></Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/office-workplace-cleaning-services">Commercial & Office <span>34</span></Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/airbnb-cleaning-services">Airbnb Hospitality <span>12</span></Link></li>
+          <li><Link onClick={ClickHandler} to="/service-single/warehouse-cleaning-services">Warehouse & Industrial <span>15</span></Link></li>
         </ul>
 
       </div>
@@ -142,4 +159,3 @@ const BlogSidebar: React.FC = () => {
 };
 
 export default BlogSidebar;
-// Trigger rebuild

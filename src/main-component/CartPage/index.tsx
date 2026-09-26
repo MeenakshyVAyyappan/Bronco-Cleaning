@@ -6,6 +6,7 @@ import Navbar2 from "../../components/Navbar2/Navbar2";
 import PageTitle from "../../components/pagetitle/PageTitle";
 import Footer from "../../components/footer/Footer";
 import Scrollbar from "../../components/scrollbar/scrollbar";
+import { scrollToTop } from "../../components/ScrollToTop";
 
 import {
   removeFromCart,
@@ -18,7 +19,7 @@ const CartPage: React.FC = () => {
 
   const carts = useSelector((state: RootState) => state.cart.cart);
 
-  const ClickHandler = () => window.scrollTo(10, 0);
+  const ClickHandler = () => scrollToTop();
 
   const totalPrice = carts.reduce(
     (sum, item) => sum + item.qty * Number(item.price),

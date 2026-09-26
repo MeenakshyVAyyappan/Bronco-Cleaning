@@ -49,17 +49,17 @@ const BlogSingle: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
 
                   <li>
                     <i className="fi flaticon-calendar"></i>
-                    <Link to="#">{blog.date}</Link>
+                    <span>{blog.date}</span>
                   </li>
 
                   <li>
                     <i className="fi ti-user"></i>
-                    <Link to="#">{blog.author}</Link>
+                    <span>{blog.author}</span>
                   </li>
 
                   <li>
                     <i className="fi flaticon-clock"></i>
-                    <Link to="#">{blog.category}</Link>
+                    <Link to="/blog">{blog.category}</Link>
                   </li>
 
                 </ul>
@@ -156,9 +156,9 @@ const BlogSingle: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
                       <span>Tag:</span>
 
                       <ul>
-                        <li><Link to="#">Dubai Cleaning</Link></li>
-                        <li><Link to="#">Deep Clean</Link></li>
-                        <li><Link to="#">BCS</Link></li>
+                        <li><Link to="/service">Dubai Cleaning</Link></li>
+                        <li><Link to="/service-single/deep-cleaning-services-dubai">Deep Clean</Link></li>
+                        <li><Link to="/about">BCS</Link></li>
                       </ul>
 
                     </div>
@@ -177,10 +177,10 @@ const BlogSingle: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
                       <span>Share:</span>
 
                       <ul>
-                        <li><Link to="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
-                        <li><Link to="#"><i className="flaticon-linkedin"></i></Link></li>
-                        <li><Link to="#"><i className="flaticon-vimeo"></i></Link></li>
-                        <li><Link to="#"><i className="flaticon-twitter"></i></Link></li>
+                        <li><a href="https://facebook.com/broncocleaning" target="_blank" rel="noopener noreferrer"><i className="flaticon-facebook-app-symbol"></i></a></li>
+                        <li><a href="https://linkedin.com/company/broncocleaning" target="_blank" rel="noopener noreferrer"><i className="flaticon-linkedin"></i></a></li>
+                        <li><a href="https://instagram.com/broncocleaning" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/971541484800" target="_blank" rel="noopener noreferrer"><i className="fa fa-whatsapp"></i></a></li>
                       </ul>
 
                     </div>

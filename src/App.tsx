@@ -15,14 +15,20 @@ import Lenis from "lenis";
 import ErrorBoundary from "./ErrorBoundary";
 
 import FloatingSocials from "./components/FloatingSocials";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App: React.FC = () => {
   useEffect(() => {
+    if (typeof window !== "undefined" && "scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
     const lenis = new Lenis({
       duration: 1.2,
-      
       smoothWheel: true,
     });
+
+    (window as any).lenis = lenis;
 
     let rafId: number;
 
@@ -36,6 +42,7 @@ const App: React.FC = () => {
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
+      delete (window as any).lenis;
     };
   }, []);
 
@@ -43,6 +50,7 @@ const App: React.FC = () => {
     <div className="App lenis" id="scroll">
       <ErrorBoundary>
         <>
+          <ScrollToTop />
           <AllRoute />
           <FloatingSocials />
           <ToastContainer position="top-right" autoClose={3000} />

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import blogs from "../../api/blogs";
 import BlogSidebar from "../BlogSidebar";
+import { scrollToTop } from "../ScrollToTop";
 
 interface BlogProps {
   bclass?: string;
@@ -12,7 +13,7 @@ interface BlogProps {
 const BlogPage: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   return (
@@ -37,7 +38,9 @@ const BlogPage: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
 
                     {/* IMAGE */}
                     <div className="entry-media">
-                      <img src={blog.blogSingleImg} alt={blog.title} />
+                      <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>
+                        <img src={blog.blogSingleImg} alt={blog.title} />
+                      </Link>
 
                       <span>
                         {day} <br />
@@ -61,14 +64,14 @@ const BlogPage: React.FC<BlogProps> = ({ bclass, blRight, blLeft }) => {
 
                         <li>
                           <i className="fi ti-comment-alt"></i>
-                          <Link to="#">
+                          <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>
                             Comments ({blog.comments})
                           </Link>
                         </li>
 
                         <li>
                           <i className="fi flaticon-clock"></i>
-                          <Link to="#">
+                          <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>
                             3 min Read
                           </Link>
                         </li>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
+import { scrollToTop } from "../ScrollToTop";
 
 import blogs from "../../api/blogs";
 import cleaningIcon from "../../images/cleaning-icon.svg";
@@ -10,7 +11,7 @@ import cleaningIcon from "../../images/cleaning-icon.svg";
 const BlogSection: React.FC = () => {
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   const ref = useRef<HTMLDivElement | null>(null);
@@ -69,7 +70,9 @@ const BlogSection: React.FC = () => {
                     <div className="wpo-blog-item">
 
                       <div className="wpo-blog-img middle-light">
-                        <img src={blog.image} alt={blog.title} />
+                        <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>
+                          <img src={blog.image} alt={blog.title} />
+                        </Link>
                       </div>
 
                       <div className="wpo-blog-content">

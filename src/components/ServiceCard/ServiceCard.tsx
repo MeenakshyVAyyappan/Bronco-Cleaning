@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import type { Service } from "../../api/services";
+import { scrollToTop } from "../ScrollToTop";
 
 interface ServiceCardProps {
   service: Service;
@@ -17,14 +18,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     if (onClickHandler) {
       onClickHandler();
     } else {
-      window.scrollTo(0, 0);
+      scrollToTop();
     }
   };
 
   return (
     <div className={`wpo-service-item h-100 ${className}`}>
       <div className="wpo-service-img middle-light">
-        <img src={service.image} alt={service.title} />
+        <Link onClick={handleClick} to={`/service-single/${service.slug}`}>
+          <img src={service.image} alt={service.title} />
+        </Link>
       </div>
 
       <div className="wpo-service-text">

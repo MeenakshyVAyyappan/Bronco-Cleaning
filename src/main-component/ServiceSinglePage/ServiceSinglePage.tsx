@@ -5,6 +5,7 @@ import PageTitle from "../../components/pagetitle/PageTitle";
 import Footer from "../../components/footer/Footer";
 import Scrollbar from "../../components/scrollbar/scrollbar";
 import services from "../../api/services";
+import { scrollToTop } from "../../components/ScrollToTop";
 
 const ServiceSinglePage: React.FC = () => {
 
@@ -21,7 +22,7 @@ const ServiceSinglePage: React.FC = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    scrollToTop();
   }, [slug]);
 
   if (!ServiceDetails) {

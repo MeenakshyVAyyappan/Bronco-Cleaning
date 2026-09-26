@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../ScrollToTop";
 
 import footerShape from "../../images/footer-shape.png";
 import logo from "../../images/logo/broncologo.png";
@@ -16,14 +17,14 @@ const Footer: React.FC = () => {
   ];
 
   const socials = [
-    { icon: "ti-facebook", link: "#" },
-    { icon: "ti-instagram", link: "#" },
-    { icon: "ti-linkedin", link: "#" },
-    { icon: "ti-twitter-alt", link: "#" },
+    { icon: "ti-facebook", link: "https://facebook.com/broncocleaning" },
+    { icon: "ti-instagram", link: "https://instagram.com/broncocleaning" },
+    { icon: "ti-linkedin", link: "https://linkedin.com/company/broncocleaning" },
+    { icon: "fa fa-whatsapp", link: "https://wa.me/971541484800" },
   ];
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   return (
@@ -106,7 +107,7 @@ const Footer: React.FC = () => {
 
                     {socials.map((social, index) => (
                       <li key={index}>
-                        <a href={social.link}>
+                        <a href={social.link} target="_blank" rel="noopener noreferrer">
                           <i className={social.icon}></i>
                         </a>
                       </li>

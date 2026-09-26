@@ -5,6 +5,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import MobileMenu from "../MobileMenu/MobileMenu";
 import logo from "../../images/logo/broncologo.png";
+import { scrollToTop } from "../ScrollToTop";
 
 interface SubMenuItem {
   label: string;
@@ -63,7 +64,7 @@ const HeaderTwo: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const ClickHandler = () => window.scrollTo(10, 0);
+  const ClickHandler = () => scrollToTop();
 
   const isPathActive = (targetPath?: string, children?: SubMenuItem[]) => {
     if (!targetPath) return false;

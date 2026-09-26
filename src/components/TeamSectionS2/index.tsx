@@ -4,10 +4,11 @@ import { Fade } from "react-awesome-reveal";
 import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
 import teamMembers from "../../api/team";
+import { scrollToTop } from "../ScrollToTop";
 
 const TeamSectionS2: React.FC = () => {
 
-  const ClickHandler = () => window.scrollTo(10, 0);
+  const ClickHandler = () => scrollToTop();
 
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -47,7 +48,9 @@ const TeamSectionS2: React.FC = () => {
 
                       <div className="wpo-team-img">
 
-                        <img src={member.image} alt={member.name} />
+                        <Link onClick={ClickHandler} to={`/team-single/${member.slug}`}>
+                          <img src={member.image} alt={member.name} />
+                        </Link>
 
                         <div className="social">
                           <ul>

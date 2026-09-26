@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import { scrollToTop } from "../ScrollToTop";
 
 import callIcon from "../../images/call.svg";
 import logo from "../../images/logo/broncologo.png";
@@ -60,7 +61,7 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   const isPathActive = (targetPath?: string, children?: SubMenuItem[]) => {

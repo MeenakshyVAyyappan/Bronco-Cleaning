@@ -4,11 +4,12 @@ import { Fade } from "react-awesome-reveal";
 import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
 import heroVideo from "../../images/video.mp4";
+import { scrollToTop } from "../ScrollToTop";
 
 const HeroThree: React.FC = () => {
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   const ref = useRef<HTMLDivElement | null>(null);

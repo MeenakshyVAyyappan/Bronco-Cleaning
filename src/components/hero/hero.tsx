@@ -1,13 +1,14 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../ScrollToTop";
 
 import HeroVideo from "../../images/video1.mp4";
 
 const HeroStatic: React.FC = () => {
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   return (

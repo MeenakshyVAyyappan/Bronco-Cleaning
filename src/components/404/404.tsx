@@ -1,10 +1,11 @@
 import {Link} from 'react-router-dom'
 import erimg from '../../images/404.png'
+import { scrollToTop } from '../ScrollToTop';
 
 
 const Error: React.FC = () => {
     const ClickHandler = () =>{
-        window.scrollTo(10, 0);
+        scrollToTop();
      }
 
     return(

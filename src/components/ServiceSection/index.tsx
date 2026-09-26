@@ -6,6 +6,7 @@ import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
 import useResponsiveSlidesToShow from "../useResponsiveSlidesToShow/useResponsiveSlidesToShow";
 import services from "../../api/services";
 import ServiceCard from "../ServiceCard";
+import { scrollToTop } from "../ScrollToTop";
 
 import cleaningIcon from "../../images/cleaning-icon.svg";
 import shape1 from "../../images/service/shape1.svg";
@@ -15,7 +16,7 @@ import shape3 from "../../images/service/shape3.svg";
 const ServiceSection: React.FC = () => {
 
   const ClickHandler = () => {
-    window.scrollTo(10, 0);
+    scrollToTop();
   };
 
   const slidesToShow = useResponsiveSlidesToShow(

@@ -4,6 +4,7 @@ import { Fade, Zoom } from "react-awesome-reveal";
 import CountUp from "react-countup";
 import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
+import { scrollToTop } from "../ScrollToTop";
 
 import aboutImg from "../../images/about/about.png";
 import leaf1 from "../../images/about/leaf2.png";
@@ -12,7 +13,7 @@ import shape from "../../images/about/ab-shape.png";
 
 const AboutSectionThree: React.FC = () => {
 
-  const ClickHandler = () => window.scrollTo(10, 0);
+  const ClickHandler = () => scrollToTop();
 
   const ref = useRef<HTMLDivElement | null>(null);
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Fade, Zoom } from "react-awesome-reveal";
 import { useRef } from "react";
 import useSplitTextAnimation from "../splittextAnimation/useSplitTextAnimation";
+import { scrollToTop } from "../ScrollToTop";
 
 import AboutImg1 from "../../images/about/about-img-1.jpg";
 import AboutImg2 from "../../images/about/about-img-2.jpg";
@@ -23,7 +24,7 @@ const features: FeatureItem[] = [
 ];
 
 const AboutSectionTwo: React.FC = () => {
-  const ClickHandler = () => window.scrollTo(10, 0);
+  const ClickHandler = () => scrollToTop();
 
   const ref = useRef<HTMLDivElement | null>(null);
 

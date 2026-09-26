@@ -8,6 +8,9 @@ const Scrollbar: React.FC = () => {
       top: 0,
       behavior: "smooth",
     });
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: false });
+    }
   };
 
   return (
